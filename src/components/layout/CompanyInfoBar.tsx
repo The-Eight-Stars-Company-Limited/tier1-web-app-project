@@ -24,32 +24,78 @@ function CompanyInfoBar() {
         <div className="flex space-x-2 md:space-x-4">
           {/* Call us Button */}
           <Button 
-          variant="outline" 
-            className="h-8 px-3 text-blue-900 border-blue-900 hover:bg-blue-900 hover:text-white transition-colors duration-200"
+            className="
+              group
+              h-9 px-3 
+              bg-button-blue text-white shadow-button 
+              hover:bg-button-hover-blue/80 hover:text-white/80
+              active:bg-white active:text-button-blue
+              transition-colors duration-200
+              rounded-[var(--radius-button)] 
+            "
+            
             // onClick={() => alert('Open Call us Dialog')} // Placeholder for future Dialog open logic
           >
-            <Phone size={16} className="text-blue-900 group-hover:text-white" />
-            <span className="ml-1 hidden md:inline">Call us</span>
+            <Phone 
+              size={16} 
+              className="
+               shrink-0
+             text-white 
+             group-hover:text-white/80 
+             group-active:text-button-blue 
+             " 
+            />
+            <span className="ml-1 hidden md:inline font-poppins">Call us</span>
           </Button>
 
           {/* Email us Button */}
           <Button 
-              variant="outline" 
-              className="h-8 px-3 text-blue-900 border-blue-900 hover:bg-blue-900 hover:text-white transition-colors duration-200"
+              className="
+              group
+              h-9 px-3 
+              bg-button-blue text-white shadow-button 
+              hover:bg-button-hover-blue/80 hover:text-white/80
+              active:bg-white active:text-button-blue
+              transition-colors duration-200
+              rounded-[var(--radius-button)] 
+            "
               // onClick={() => alert('Open Email us Dialog')} // Placeholder for future Dialog open logic
           >
-              <Mail size={16} className="text-blue-900 group-hover:text-white" />
-              <span className="ml-1 hidden md:inline">Email us</span>
+              <Mail 
+                size={16} 
+                className="
+                shrink-0
+                text-white 
+                group-hover:text-white/80 
+                group-active:text-button-blue 
+                " 
+              />
+              <span className="ml-1 hidden md:inline font-poppins">Email us</span>
           </Button>
 
           {/* Locate us Button */}
           <Button 
-            variant="outline" 
-            className="h-8 px-3 text-blue-900 border-blue-900 hover:bg-blue-900 hover:text-white transition-colors duration-200"
+            className="
+              group
+              h-9 px-3 
+              bg-button-blue text-white shadow-button 
+              hover:bg-button-hover-blue/80 hover:text-white/80
+              active:bg-white active:text-button-blue
+              transition-colors duration-200
+              rounded-[var(--radius-button)] 
+            "
             // onClick={() => alert('Open Locate us Dialog')} // Placeholder for future Dialog open logic
           >
-            <MapPin size={16} className="text-blue-900 group-hover:text-white" />
-            <span className="ml-1 hidden md:inline">Locate us</span>
+            <MapPin 
+              size={16} 
+              className="
+              shrink-0
+              text-white 
+              group-hover:text-white/80 
+              group-active:text-button-blue 
+              " 
+            />
+            <span className="ml-1 hidden md:inline font-poppins">Locate us</span>
           </Button>
         </div>
       </div>
