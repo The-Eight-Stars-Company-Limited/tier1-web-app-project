@@ -1,1 +1,17 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  /* Custom Colors */
+  --color-button-blue: #072C8B; /* Normal button background */
+  --color-button-hover-blue: #1A52E2; /* Hover button base color */
+
+  /* Custom Box Shadow */
+  --shadow-button: 0px 0px 20px 0px rgba(0, 0, 0, 0.20); /* Your defined shadow */
+
+  /* Custom Font Family */
+  --font-poppins: Poppins, sans-serif; /* Poppins font */
+
+  /* Custom Button corner radius */
+  --radius-button: 14px;
+}
