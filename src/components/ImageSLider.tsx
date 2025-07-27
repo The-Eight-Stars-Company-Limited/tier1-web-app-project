@@ -22,7 +22,7 @@ const ImageSLider = () => {
   }, [images.length]);
 
   return (
-    <div className="relative w-full h-[500px] flex items-center justify-center overflow-visible">
+    <div className="relative w-full h-[350px] lg:h-[500px] flex items-center justify-center overflow-visible my-[20px]">
         {images.map((img, index) => {
             const isActive = index === current % images.length;
             const isPrev = index === (current - 1) % images.length;
@@ -42,7 +42,7 @@ const ImageSLider = () => {
             );
         })}
 
-        <div className=" w-full h-[200px] flex gap-1 absolute bottom-[-20%] md:bottom-[-25%] right-[-49%] z-50 ">
+        <div className=" w-full sm:[75px] md:h-[90px] lg:h-[200px] flex gap-1 absolute bottom-[0] lg:bottom-[-25%] right-[-49%] z-50 ">
             {images.map((_, index) => (
             <span
                 key={index}
