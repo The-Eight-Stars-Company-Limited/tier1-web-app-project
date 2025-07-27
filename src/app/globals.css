@@ -15,3 +15,8 @@
   /* Custom Button corner radius */
   --radius-button: 14px;
 }
+
+.active{
+    background: var(--color-button-blue);
+    transform: scale(1.3);
+}
