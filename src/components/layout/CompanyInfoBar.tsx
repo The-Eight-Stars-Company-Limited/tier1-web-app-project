@@ -18,7 +18,7 @@ function CompanyInfoBar() {
         {/* Company Logo */}
         <div className="flex items-center space-x-2">
           <Image 
-            src="/assets/helpers/company-logo.svg"
+            src="/helpers/company-logo.svg"
             alt="The Eight Stars Company Limited Logo"
             width={110}
             height={10}
