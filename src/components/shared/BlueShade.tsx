@@ -1,5 +1,3 @@
-import React from 'react'
-
 type CircleProps = {
   size: string;
   thickness?: string;

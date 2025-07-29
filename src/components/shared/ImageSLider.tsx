@@ -1,8 +1,10 @@
+"use client";
+
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 
 
-const images: string[] = ["/assets/images/about-image-1.jpg", "/assets/images/about-image-2.jpg", "/assets/images/about-image-1.jpg"];
+const images: string[] = ["/images/about/about-image-1.jpg", "/images/about/about-image-2.jpg", "/images/about/about-image-1.jpg"];
 
 
 const ImageSLider = () => {

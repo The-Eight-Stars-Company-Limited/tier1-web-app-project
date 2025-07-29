@@ -36,7 +36,7 @@ export default function RootLayout({
       <body className={`
         ${geistSans.variable} ${geistMono.variable} ${poppins.variable}
         bg-black text-white
-        overflow-x-hidden overflow-y-hidden
+        overflow-x-hidden 
       `}>
       <CompanyInfoBar />
       <NavBar />

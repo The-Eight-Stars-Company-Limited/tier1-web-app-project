@@ -59,29 +59,29 @@ function HeroSection() {
       );
     }, 5000); 
 
-    return () => clearInterval(interval); // Clean up the interval on component unmount
-  }, []); // Empty dependency array means this runs once on mount and cleans up on unmount
+    return () => clearInterval(interval); 
+  }, []); 
 
   return (
-    <section className="relative w-full h-[calc(100vh-8rem)] overflow-hidden">
+    <section className="relative w-full h-[600px] overflow-hidden mb-[4%]">
       {/* Image Background */}
-      <AnimatePresence mode="wait"> {/* Ensures one animation finishes before the next starts */}
+      <AnimatePresence mode="wait"> 
         <motion.div
-          key={currentSlide.id} // Important: Forces component remount/animation on slide change
+          key={currentSlide.id} 
           variants={imageVariants}
           initial="initial"
           animate="animate"
           exit="exit"
-          transition={{ duration: 0.8 }} // Image transition duration
+          transition={{ duration: 0.8 }} 
           className="absolute inset-0"
         >
           <Image
             src={currentSlide.imageSrc}
-            alt={currentSlide.heading} // Use heading as alt text for now
-            fill // Fills the parent motion.div
-            style={{ objectFit: 'cover' }} // Ensures image covers the area
-            priority={currentSlideIndex === 0} // Prioritize loading the first image
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw" // Responsive image sizing
+            alt={currentSlide.heading} 
+            fill 
+            style={{ objectFit: 'cover' }} 
+            priority={currentSlideIndex === 0} 
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw" 
           />
           {/* Optional: Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-black opacity-40"></div>
@@ -92,12 +92,12 @@ function HeroSection() {
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-4 z-10">
         <AnimatePresence mode="wait">
           <motion.div
-            key={currentSlide.id + '-text'} // Unique key for text animation
+            key={currentSlide.id + '-text'} 
             variants={textVariants}
             initial="initial"
             animate="animate"
             exit="exit"
-            transition={{ duration: 0.8 }} // Text transition duration and slight delay
+            transition={{ duration: 0.8 }}
             className="flex flex-col items-center"
           >
             <h1 className="text-white text-3xl md:text-5xl font-extrabold font-poppins drop-shadow-md">

@@ -3,6 +3,7 @@
 
 @theme {
   /* Custom Colors */
+  --color-theme-yellow: #FFD27F;
   --color-button-yellow: #FFD27F;
   --color-button-blue: #072C8B; /* Normal button background */
   --color-button-hover-blue: #1A52E2; /* Hover button base color */
@@ -19,4 +20,14 @@
 
   /* Custom Button corner radius */
   --radius-button: 16px;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
 }
