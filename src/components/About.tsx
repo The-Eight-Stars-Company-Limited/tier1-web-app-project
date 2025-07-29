@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import React from 'react'
 import BlueShade from './BlueShade'
 import ImageSLider from './ImageSLider'

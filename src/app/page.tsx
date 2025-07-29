@@ -1,5 +1,4 @@
 'use client'
-import ImageSLider from "@/components/ImageSLider";
 import About from "../components/About";
 
 export default function Home() {
@@ -10,7 +9,6 @@ export default function Home() {
       </h1>
 
     <About/>
-    {/* <ImageSLider/> */}
 
     </div>
 

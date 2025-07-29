@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} bg-[#FFD27F] text-white`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} bg-black text-white`}>
       <CompanyInfoBar />
         {children}
       </body>

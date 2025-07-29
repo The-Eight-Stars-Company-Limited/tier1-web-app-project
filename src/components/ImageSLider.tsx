@@ -29,9 +29,12 @@ const ImageSLider = () => {
             const isNext = index === (current + 1) % images.length;
 
             return (
-            <img
+            <Image
                 key={index}
                 src={img}
+                alt=''
+                width={200}
+                height={100}
                 className={`
                 absolute transition-all duration-500 rounded-[30px]
                 ${isActive ? "z-15 w-[40%] scale-100" : "z-10 w-[20%] scale-150 opacity-60"}
