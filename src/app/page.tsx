@@ -1,5 +1,4 @@
 import HeroSection from '@/components/layout/HeroSection'; 
-import HeroSectionLite from '@/components/layout/HeroSectionLite';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
