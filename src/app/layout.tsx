@@ -25,11 +25,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable} ${poppins.variable}`} suppressHydrationWarning={true}>
-      <body className={`
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable} ${poppins.variable}`}>
+      <body
+        className={`
         flex flex-col min-h-screen
         bg-black text-white overflow-x-hidden
-      `}>
+      `}
+        suppressHydrationWarning={true}
+      >
         <header>
           <CompanyInfoBar />
           <NavBar />
