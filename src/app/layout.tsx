@@ -34,7 +34,7 @@ export default function RootLayout({
           <CompanyInfoBar />
           <NavBar />
         </header>
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow bg-[#FFCF75]">{children}</main>
         <Footer />
       </body>
     </html>
