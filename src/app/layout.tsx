@@ -1,18 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
+import { GeistSans } from 'geist/font/sans';
+import { GeistMono } from 'geist/font/mono';
 import "./globals.css";
 import CompanyInfoBar from "@/components/layout/CompanyInfoBar";
 import NavBar from "@/components/layout/Navbar";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Footer from "../components/layout/Footer";
 
 const poppins = Poppins({
   variable: "--font-poppins", 
@@ -32,15 +25,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable} ${poppins.variable}`} suppressHydrationWarning={true}>
       <body className={`
-        ${geistSans.variable} ${geistMono.variable} ${poppins.variable}
-        bg-black text-white
-        overflow-x-hidden overflow-y-hidden
+        flex flex-col min-h-screen
+        bg-black text-white overflow-x-hidden
       `}>
-      <CompanyInfoBar />
-      <NavBar />
-        {children}
+        <header>
+          <CompanyInfoBar />
+          <NavBar />
+        </header>
+        <main className="flex-grow">{children}</main>
+        <Footer />
       </body>
     </html>
   );

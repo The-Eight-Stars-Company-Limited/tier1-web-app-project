@@ -17,10 +17,10 @@ function NavLink({ href, label }: NavLinkProps) {
       href={href}
       aria-current={isActive ? 'page' : undefined}
       className={`
-        font-medium px-3 py-1.5 rounded-button transition-colors duration-200 font-poppins
+        font-medium px-3 py-1.5 rounded-full transition-colors duration-200 font-poppins
         ${isActive
-          ? 'bg-nav-active-bg text-white border border-nav-active-border ring-2 ring-white hover:bg-nav-active-border/50 rounded-full' 
-          : 'text-button-blue hover:text-white rounded-button'
+          ? 'bg-button-blue text-white border border-button-blue ring-2 ring-white hover:bg-button-blue/80' 
+          : 'text-button-blue hover:bg-button-blue hover:text-white'
         }
       `}
     >
