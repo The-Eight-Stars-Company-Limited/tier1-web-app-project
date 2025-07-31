@@ -1,5 +1,26 @@
 import Link from 'next/link';
 
+const footerNavLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/products', label: 'Products' },
+  { href: '/services', label: 'Services' },
+  { href: '/about', label: 'About Us' },
+  { href: '/contact', label: 'Contact Us' },
+];
+
+const contactInfo = {
+  address: '123 Main St, Anytown, USA',
+  email: 'sales@theeightstars.com',
+  phone: '+1 (555) 123-4567',
+};
+
+const FooterLink = ({ href, label }: { href: string; label: string }) => (
+  <li>
+    <Link href={href} className="text-gray-400 hover:text-button-yellow transition-colors">
+      {label}
+    </Link>
+  </li>
+);
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -16,19 +37,17 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link href="/" className="text-gray-400 hover:text-button-yellow transition-colors">Home</Link></li>
-              <li><Link href="/products" className="text-gray-400 hover:text-button-yellow transition-colors">Products</Link></li>
-              <li><Link href="/services" className="text-gray-400 hover:text-button-yellow transition-colors">Services</Link></li>
-              <li><Link href="/about" className="text-gray-400 hover:text-button-yellow transition-colors">About Us</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-button-yellow transition-colors">Contact Us</Link></li>
+              {footerNavLinks.map((link) => (
+                <FooterLink key={link.href} href={link.href} label={link.label} />
+              ))}
             </ul>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>123 Main St, Anytown, USA</li>
-              <li>sales@theeightstars.com</li>
-              <li>+1 (555) 123-4567</li>
+              <li>{contactInfo.address}</li>
+              <li>{contactInfo.email}</li>
+              <li>{contactInfo.phone}</li>
             </ul>
           </div>
         </div>
