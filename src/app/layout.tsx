@@ -35,7 +35,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`
         ${geistSans.variable} ${geistMono.variable} ${poppins.variable}
-        bg-theme-yellow text-white
+        bg-white text-black
         overflow-x-hidden
       `}>
         <CompanyInfoBar />

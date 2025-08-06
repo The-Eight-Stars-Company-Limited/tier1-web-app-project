@@ -27,7 +27,7 @@ function CompanyInfoBar() {
           />
         </div>
 
-        {/* Contact Action Buttons - using Shadcn Button component */}
+        {/* Contact Action Buttons */}
         <div className="flex space-x-2 md:space-x-4">
           {/* Call us Button */}
           <Popover open={isCallUsOpen} onOpenChange={setIsCallUsOpen}>
