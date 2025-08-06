@@ -15,10 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 const poppins = Poppins({
-  variable: "--font-poppins", 
+  variable: "--font-poppins",
   subsets: ["latin"],
-  weight: "400", 
-  display: "swap", 
+  weight: "400",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -36,10 +36,10 @@ export default function RootLayout({
       <body className={`
         ${geistSans.variable} ${geistMono.variable} ${poppins.variable}
         bg-theme-yellow text-white
-        overflow-x-hidden 
+        overflow-x-hidden
       `}>
-      <CompanyInfoBar />
-      <NavBar />
+        <CompanyInfoBar />
+        <NavBar />
         {children}
       </body>
     </html>
