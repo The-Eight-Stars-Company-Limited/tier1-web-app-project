@@ -21,6 +21,7 @@ const FooterLink = ({ href, label }: { href: string; label: string }) => (
     </Link>
   </li>
 );
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
