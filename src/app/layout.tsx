@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import { GeistSans } from 'geist/font/sans';
-import { GeistMono } from 'geist/font/mono';
 import "./globals.css";
 import CompanyInfoBar from "@/components/layout/CompanyInfoBar";
 import NavBar from "@/components/layout/Navbar";
@@ -25,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${poppins.variable}`}>
       <body
         className={`
         flex flex-col min-h-screen
