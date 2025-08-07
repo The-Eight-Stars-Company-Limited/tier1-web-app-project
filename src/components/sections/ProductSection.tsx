@@ -1,7 +1,8 @@
 "use client";
 
 import LineDrawing from "@/components/shared/LineDrawing";
-import ProductCards from "@/components/shared/ProductCard";
+import ProductCardsOne from "@/components/shared/ProductCardsOne";
+import ProductCardsTwo from "@/components/shared/ProductCardsTwo";
 
 function ProductSection() {
   return (
@@ -13,7 +14,7 @@ function ProductSection() {
         Our Products
       </div>
       <div className="w-[52%] mx-auto text-center">
-        <p className="text-white font-poppins text-xl mb-10 leading-8">
+        <p className="text-white font-poppins text-xl mb-10 leading-8 text-shadow-md">
           Discover our extensive range of high-quality building and construction materials,
           including blocks, pipes, electricals, and more. <br />Our products are sourced from
           trusted manufacturers to ensure durability and reliability for all your projects.
@@ -21,8 +22,20 @@ function ProductSection() {
       </div>
 
       <LineDrawing />
-
-      <ProductCards />
+      {/* What we Make Section */}
+      <div>
+        <div className="flex justify-center mx-auto w-full mb-15">
+          <p className='font-poppins text-4xl font-bold text-white text-shadow-lg'>
+            What we Make
+          </p>
+        </div>
+        
+        {/* Product Cards */}
+        <div>
+          <ProductCardsOne />
+          <ProductCardsTwo />
+        </div>
+      </div>
     </div>
   );
 }
