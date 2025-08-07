@@ -31,7 +31,7 @@ function NavLink({ href, label }: NavLinkProps) {
 
 export default function NavBar() {
   return (
-    <nav className="sticky top-0 z-50 bg-nav-background py-3 shadow-sm">
+    <nav className="hidden md:block sticky top-0 z-50 bg-nav-background py-3 shadow-sm">
       <div className="container mx-auto flex justify-start items-center px-4 md:px-6 lg:px-8">
         <div className="flex space-x-8">
           <NavLink href="/" label="Home" />

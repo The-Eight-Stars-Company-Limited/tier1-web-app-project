@@ -22,13 +22,13 @@ function CompanyInfoBar() {
             alt="The Eight Stars Company Limited Logo"
             width={110}
             height={10}
-            className="h-auto"
+            className="h-auto "
             priority         
           />
         </div>
 
         {/* Contact Action Buttons */}
-        <div className="flex space-x-2 md:space-x-4">
+        <div className="hidden md:flex space-x-2 md:space-x-4">
           {/* Call us Button */}
           <Popover open={isCallUsOpen} onOpenChange={setIsCallUsOpen}>
             <PopoverTrigger asChild>
