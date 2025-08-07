@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 function ProductCardsTwo() {
   return (
@@ -55,9 +56,13 @@ function ProductCardsTwo() {
               <p className="font-poppins text-sm mt-0.5 text-theme-blue w-[185px]">
                 Durable and high-quality blocks for your projects.
               </p>
-              <button className='justify-self-start mt-4 w-[100px] text-theme-blue'>
+              <Button 
+                className='
+                justify-self-start mt-4 w-[100px] text-theme-blue bg-white
+                rounded-full cursor-pointer
+                '>
                 View More
-              </button>
+              </Button>
             </div>
               
             {/* Image on the right */}

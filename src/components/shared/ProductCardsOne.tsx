@@ -1,33 +1,58 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import ProductDialogBtn from './ProductDialogBtn';
+import ProductDialogCard from './ProductDialogCard';
 
 function ProductCardsOne() {
   return (
     <>
-    <motion.div
-    initial={{ opacity: 0, y: -60 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1.0, delay: 0.6 }}
-    >
-      <div className="flex justify-center mx-auto px-8 gap-6 w-full mb-15">
+      <motion.div 
+        initial={{ opacity: 0, y: -60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.0, delay: 0.6 }}
+        className="flex justify-center mx-auto px-8 gap-6 w-full mb-15">
         {/* Container for product cards */}
         <div className="flex flex-col md:flex-row gap-6 items-center w-full max-w-5xl mx-auto">
         
         {/* Rectangular Card */}
         <motion.div 
-        whileHover={{ scale: 1.06 }}
-        className="bg-theme-yellow rounded-[32px] shadow-lg w-[50%] h-[250px] flex overflow-hidden">
+          whileHover={{ scale: 1.06 }}
+          className="bg-theme-yellow rounded-[32px] shadow-lg w-[50%] h-[250px] flex overflow-hidden">
           {/* Text on the left */}
           <div className="flex-1 p-6 pr-0 flex flex-col justify-end">
             <p className="font-poppins text-xl font-semibold text-theme-blue">
-              Concrete Blocks
+              Pavement Blocks
             </p>
             <p className="font-poppins text-sm mt-0.5 text-theme-blue w-[185px]">
               Durable and high-quality blocks for your projects.
             </p>
-            <button className='justify-self-start mt-4 w-[100px] text-theme-blue'>
-              View More
-            </button>
+            <ProductDialogBtn 
+              title="Concrete Blocks" 
+              description="Explore our range of high-quality concrete blocks."
+            >
+              <div className="grid grid-cols-2 gap-4 mt-4">
+                  <ProductDialogCard 
+                    src="/images/products/build-image-1.jpeg" 
+                    alt="Building a wall"
+                    title="Residential Walls"
+                  />
+                  <ProductDialogCard 
+                    src="/images/products/build-image-2.jpeg" 
+                    alt="Pavement blocks"
+                    title="Walkways & Patios"
+                  />
+                  <ProductDialogCard 
+                    src="/images/products/build-image-1.jpeg" 
+                    alt="Garden design"
+                    title="Garden Borders"
+                  />
+                  <ProductDialogCard 
+                    src="/images/products/build-image-2.jpeg" 
+                    alt="Commercial building"
+                    title="Commercial Foundations"
+                  />
+                </div>
+           </ProductDialogBtn>
           </div>
           
           {/* Image on the right */}
@@ -76,9 +101,8 @@ function ProductCardsOne() {
           </div>
         </div>
        </div>
-      </div>
-    </motion.div>
-  </>
+      </motion.div>
+    </>
   );
 }
 
