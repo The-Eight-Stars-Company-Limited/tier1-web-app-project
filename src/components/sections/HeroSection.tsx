@@ -1,8 +1,8 @@
 "use client";
 
-import Image from 'next/image'; 
-import { motion, AnimatePresence } from 'framer-motion'; 
-import { useState, useEffect } from 'react'; 
+import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 interface Slide {
   id: number;
@@ -15,89 +15,90 @@ interface Slide {
 const slides: Slide[] = [
   {
     id: 1,
-    imageSrc: '/images/hero/hero-image-1.jpg', 
+    imageSrc: '/images/hero/hero-image-1.jpg',
     heading: 'Welcome to',
     subheading: 'THE EIGHT STARS LIMITED COMPANY',
   },
   {
     id: 2,
-    imageSrc: '/images/hero/hero-image-2.jpg', 
+    imageSrc: '/images/hero/hero-image-2.jpg',
     heading: 'Your One Stop',
     subheading: 'For all your Building, Construction & Electrical Materials',
   },
   {
     id: 3,
-    imageSrc: '/images/hero/hero-image-3.jpg', 
+    imageSrc: '/images/hero/hero-image-3.jpg',
     heading: 'Quality & Reliability',
     subheading: 'Delivering Excellence in Every Project',
   },
 ];
 
 // Animation variants for Framer Motion
-const imageVariants = {
-  initial: { x: "100%", opacity: 0 },
-  animate: { x: "0%", opacity: 1 },
-  exit: { x: "-100%", opacity: 0 },
-};
-
 const textVariants = {
   initial: { x: "100%", opacity: 0 },
-  animate: { x: "0%", opacity: 1 },
-  exit: { x: "-100%", opacity: 0 },
+  animate: {
+    x: "0%",
+    opacity: 1,
+    transition: {
+      delay: 1.0, // Delay text entrance until image is fully visible
+      duration: 0.8,
+    },
+  },
+  exit: { opacity: 0, transition: { duration: 0.6 } },
 };
 
+const imageVariants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { duration: 1 } },
+  exit: { opacity: 0, transition: { duration: 1 } },
+};
 
 function HeroSection() {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const currentSlide = slides[currentSlideIndex];
 
-  // Auto-slide logic
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlideIndex((prevIndex) =>
-        (prevIndex + 1) % slides.length
-      );
-    }, 5000); 
+      setCurrentSlideIndex((prevIndex) => (prevIndex + 1) % slides.length);
+    }, 5000);
 
-    return () => clearInterval(interval); // Clean up the interval on component unmount
-  }, []); // Empty dependency array means this runs once on mount and cleans up on unmount
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <section className="relative w-full h-[calc(100vh-8rem)] overflow-hidden">
-      {/* Image Background */}
-      <AnimatePresence mode="wait"> {/* Ensures one animation finishes before the next starts */}
+    <section className="relative w-full h-[550px] overflow-hidden mb-[4%]">
+      {/* Image Background with Fade */}
+      <AnimatePresence>
         <motion.div
-          key={currentSlide.id} // Important: Forces component remount/animation on slide change
+          key={currentSlide.id}
           variants={imageVariants}
           initial="initial"
           animate="animate"
           exit="exit"
-          transition={{ duration: 0.8 }} // Image transition duration
           className="absolute inset-0"
         >
           <Image
             src={currentSlide.imageSrc}
-            alt={currentSlide.heading} // Use heading as alt text for now
-            fill // Fills the parent motion.div
-            style={{ objectFit: 'cover' }} // Ensures image covers the area
-            priority={currentSlideIndex === 0} // Prioritize loading the first image
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw" // Responsive image sizing
+            alt={currentSlide.heading}
+            fill
+            style={{ objectFit: 'cover' }}
+            priority={currentSlideIndex === 0}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
           />
           {/* Optional: Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-black opacity-40"></div>
         </motion.div>
       </AnimatePresence>
 
-      {/* Text Overlay */}
+      {/* Text Overlay with Slide */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-4 z-10">
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           <motion.div
-            key={currentSlide.id + '-text'} // Unique key for text animation
+            key={currentSlide.id + '-text'}
             variants={textVariants}
             initial="initial"
             animate="animate"
             exit="exit"
-            transition={{ duration: 0.8 }} // Text transition duration and slight delay
             className="flex flex-col items-center"
           >
             <h1 className="text-white text-3xl md:text-5xl font-extrabold font-poppins drop-shadow-md">

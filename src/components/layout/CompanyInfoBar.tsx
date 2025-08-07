@@ -22,13 +22,13 @@ function CompanyInfoBar() {
             alt="The Eight Stars Company Limited Logo"
             width={110}
             height={10}
-            className="h-auto"
+            className="h-auto "
             priority         
           />
         </div>
 
-        {/* Contact Action Buttons - using Shadcn Button component */}
-        <div className="flex space-x-2 md:space-x-4">
+        {/* Contact Action Buttons */}
+        <div className="hidden md:flex space-x-2 md:space-x-4">
           {/* Call us Button */}
           <Popover open={isCallUsOpen} onOpenChange={setIsCallUsOpen}>
             <PopoverTrigger asChild>
@@ -36,20 +36,20 @@ function CompanyInfoBar() {
                 className={`
                   group
                   h-9 px-3 
-                  bg-button-yellow text-button-blue shadow-button 
+                  bg-theme-yellow text-theme-blue shadow-button 
                   hover:text-white hover:shadow-lg hover:cursor-pointer
                   transition-colors duration-200
                   rounded-[var(--radius-button)] 
                   ${isCallUsOpen 
-                    ? 'bg-button-blue text-white shadow-lg' 
-                    : 'bg-button-yellow text-button-blue'}
+                    ? 'bg-theme-blue text-white shadow-lg' 
+                    : 'bg-theme-yellow text-theme-blue'}
                 `}
               >
                 <Phone 
                   size={16} 
                   className={`
                     shrink-0
-                    text-button-blue 
+                    text-theme-blue 
                     group-hover:text-white 
                     ${isCallUsOpen ? 'text-white' : ''}
                 `}
@@ -60,7 +60,7 @@ function CompanyInfoBar() {
             <PopoverContent
               className="
                 w-64 py-4 px-2 text-center
-                bg-button-blue/70 shadow-lg rounded-xl
+                bg-theme-blue/70 shadow-lg rounded-xl
                 border-none
               ">
                 <p className="text-sm font-semibold font-poppins text-white">Call our sales team:</p>
@@ -77,20 +77,20 @@ function CompanyInfoBar() {
                 className={`
                   group
                   h-9 px-3 
-                  bg-button-yellow text-button-blue shadow-button 
+                  bg-theme-yellow text-theme-blue shadow-button 
                   hover:text-white hover:shadow-lg hover:cursor-pointer
                   transition-colors duration-200
                   rounded-[var(--radius-button)] 
                   ${isEmailUsOpen 
-                    ? 'bg-button-blue text-white shadow-lg' 
-                    : 'bg-button-yellow text-button-blue'}
+                    ? 'bg-theme-blue text-white shadow-lg' 
+                    : 'bg-theme-yellow text-theme-blue'}
                   `}
               >
                 <Mail 
                   size={16} 
                   className={`
                     shrink-0
-                    text-button-blue 
+                    text-theme-blue 
                     group-hover:text-white 
                     ${isEmailUsOpen ? 'text-white' : ''}
                 `}
@@ -101,7 +101,7 @@ function CompanyInfoBar() {
             <PopoverContent
             className="
               w-64 py-4 px-2 text-center
-              bg-button-blue/70 shadow-lg rounded-xl
+              bg-theme-blue/70 shadow-lg rounded-xl
               border-none
             "
             >
@@ -119,20 +119,20 @@ function CompanyInfoBar() {
                 className={`
                   group
                   h-9 px-3 
-                  bg-button-yellow text-button-blue shadow-button 
+                  bg-theme-yellow text-theme-blue shadow-button 
                   hover:text-white hover:shadow-lg hover:cursor-pointer
                   transition-colors duration-200
                   rounded-[var(--radius-button)] 
                   ${isLocateUsOpen 
-                    ? 'bg-button-blue text-white shadow-lg' 
-                    : 'bg-button-yellow text-button-blue'}
+                    ? 'bg-theme-blue text-white shadow-lg' 
+                    : 'bg-theme-yellow text-theme-blue'}
                 `}
               >
                 <MapPin 
                   size={16} 
                   className={`
                   shrink-0
-                  text-button-blue 
+                  text-theme-blue 
                   group-hover:text-white 
                   ${isLocateUsOpen ? 'text-white' : ''}
                 `} 
@@ -143,7 +143,7 @@ function CompanyInfoBar() {
             <PopoverContent
             className="
               w-64 py-4 px-2 text-center
-              bg-button-blue/70 shadow-lg rounded-xl
+              bg-theme-blue/70 shadow-lg rounded-xl
               border-none
             "
             >

@@ -3,9 +3,10 @@
 
 @theme {
   /* Custom Colors */
+  --color-theme-yellow: #FFD27F;
   --color-button-yellow: #FFD27F;
-  --color-button-blue: #072C8B; /* Normal button background */
-  --color-button-hover-blue: #1A52E2; /* Hover button base color */
+  --color-theme-blue: #072C8B; 
+  --color-button-hover-blue: #1A52E2; 
 
   /* Custom Navigation bar colors */
   --color-nav-background: #FFD27F;
@@ -15,7 +16,7 @@
   --shadow-button: 0px 3px 30px 0px rgba(0, 0, 0, 0.25); 
 
   /* Custom Font Family */
-  --font-poppins: Poppins, sans-serif; /* Poppins font */
+  --font-poppins: Poppins, sans-serif; 
 
   /* Custom Button corner radius */
   --radius-button: 16px;

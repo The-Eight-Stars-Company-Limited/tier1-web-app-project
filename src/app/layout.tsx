@@ -15,14 +15,17 @@ const geistMono = Geist_Mono({
 });
 
 const poppins = Poppins({
-  variable: "--font-poppins", 
+  variable: "--font-poppins",
   subsets: ["latin"],
-  weight: "400", 
-  display: "swap", 
+  weight: "400",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: 'The Eight Stars Company Limited',
+  icons: {
+    icon: '/favicon-1.png',
+  },
   description: 'Your one stop for all your Building, Construction & Electrical Materials',
 };
 
@@ -35,11 +38,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`
         ${geistSans.variable} ${geistMono.variable} ${poppins.variable}
-        bg-black text-white
-        overflow-x-hidden overflow-y-hidden
+        bg-white text-black
+        overflow-x-hidden
       `}>
-      <CompanyInfoBar />
-      <NavBar />
+        <CompanyInfoBar />
+        <NavBar />
         {children}
       </body>
     </html>
