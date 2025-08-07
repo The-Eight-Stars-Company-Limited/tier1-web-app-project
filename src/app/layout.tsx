@@ -23,6 +23,9 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: 'The Eight Stars Company Limited',
+  icons: {
+    icon: '/favicon-1.png',
+  },
   description: 'Your one stop for all your Building, Construction & Electrical Materials',
 };
 

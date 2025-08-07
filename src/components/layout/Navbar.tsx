@@ -20,7 +20,7 @@ function NavLink({ href, label }: NavLinkProps) {
         font-medium px-3 py-1.5 rounded-button transition-colors duration-200 font-poppins
         ${isActive
           ? 'bg-nav-active-bg text-white border border-nav-active-border ring-2 ring-white hover:bg-nav-active-border/50 rounded-full'
-          : 'text-button-blue hover:text-white rounded-button'
+          : 'text-theme-blue hover:text-white rounded-button'
         }
       `}
     >
