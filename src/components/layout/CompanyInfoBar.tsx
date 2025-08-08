@@ -5,6 +5,7 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button'; 
 import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover';
 import { useState } from 'react';
+import MobileNavMenu from './MobileNavMenu';
 
 function CompanyInfoBar() {
   const [isCallUsOpen, setIsCallUsOpen] = useState(false);
@@ -17,6 +18,9 @@ function CompanyInfoBar() {
         
         {/* Company Logo */}
         <div className="flex items-center space-x-2">
+          <div className="md:hidden">
+            <MobileNavMenu />
+          </div>
           <Image 
             src="/helpers/company-logo.svg"
             alt="The Eight Stars Company Limited Logo"

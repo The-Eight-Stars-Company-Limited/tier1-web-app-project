@@ -1,8 +1,9 @@
 "use client";
 
 import LineDrawing from "@/components/shared/LineDrawing";
-import ProductCardsOne from "@/components/shared/ProductCardsOne";
-import ProductCardsTwo from "@/components/shared/ProductCardsTwo";
+import ProductCardsOne from "@/components/shared/productCards/ProductCardsOne";
+import ProductCardsTwo from "@/components/shared/productCards/ProductCardsTwo";
+import ProductCardsThree from "@/components/shared/productCards/ProductCardsThree";
 
 function ProductSection() {
   return (
@@ -24,7 +25,7 @@ function ProductSection() {
       <LineDrawing />
       {/* What we Make Section */}
       <div>
-        <div className="flex justify-center mx-auto w-full mb-15">
+        <div className="flex justify-center mx-auto w-full mb-10">
           <p className='font-poppins text-4xl font-bold text-white text-shadow-lg'>
             What we Make
           </p>
@@ -34,6 +35,11 @@ function ProductSection() {
         <div>
           <ProductCardsOne />
           <ProductCardsTwo />
+        </div>
+
+        <LineDrawing />
+        <div>
+          <ProductCardsThree />
         </div>
       </div>
     </div>
