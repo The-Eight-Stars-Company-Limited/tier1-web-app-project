@@ -7,7 +7,7 @@ import ProductCardsThree from "@/components/shared/productCards/ProductCardsThre
 
 function ProductSection() {
   return (
-    <div className="bg-theme-blue/90 flex flex-col gap-10 mb-[7%] mx-auto px-4 w-full">
+    <div className="bg-theme-blue/90 flex flex-col gap-10 mb-[0%] mx-auto px-4 w-full">
       <div className="inline-flex items-center justify-center px-[20px] py-[10px] font-poppins 
         text-lg text-white font-semibold m-auto border-2 border-white 
         w-[170px] h-[58px] rounded-full cursor-pointer mt-15
@@ -24,7 +24,7 @@ function ProductSection() {
 
       <LineDrawing />
       {/* What we Make Section */}
-      <div>
+      <div className="mb-[7%]">
         <div className="flex justify-center mx-auto w-full mb-10">
           <p className='font-poppins text-4xl font-bold text-white text-shadow-lg'>
             What we Make
@@ -39,9 +39,6 @@ function ProductSection() {
         </div>
 
         <LineDrawing />
-        <div>
-          
-        </div>
       </div>
     </div>
   );
