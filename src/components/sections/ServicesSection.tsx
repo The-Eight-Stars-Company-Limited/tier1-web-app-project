@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import ServiceCard from "../shared/ServiceCard";
 
 function ServicesSection() {
   return (
@@ -18,7 +19,9 @@ function ServicesSection() {
         And help them achieve their project goals
       </p>
       <div className="w-full mb-60">
-        <div className="relative w-[75%] h-[350px] mx-auto shadow-2xl rounded-[16px]">
+        
+        {/* Image Section for Services with Text Overlay */}
+        <div className="relative w-[75%] h-[350px] mx-auto shadow-2xl rounded-[16px] mb-20">
           <div className="relative h-full w-full">
             <Image
               src="/images/general/services-2.png"
@@ -30,14 +33,44 @@ function ServicesSection() {
           </div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center">
             <h2 className="font-poppins text-3xl font-bold text-shadow-lg">
-                Our Services
+              Our Services
             </h2>
             <p className="font-poppins text-lg mt-2 text-shadow-lg">
-                We provide services that are tailored to meet the needs of our clients.
-                And help them achieve their project goals.
+              We provide services that are tailored to meet the needs of our clients.
+              And help them achieve their project goals.
             </p>
           </div>     
         </div>
+
+        {/* Service Cards */}
+        <div className="flex justify-center flex-row mx-auto gap-12 mb-20">
+          <ServiceCard
+            number={1}
+            imageSrc="/images/general/card-image-1.jpg"
+            title="Service 1"
+            description="Description for Service 1"
+          />
+          <ServiceCard
+            number={2}
+            imageSrc="/images/general/card-image-2.jpg"
+            title="Service 2"
+            description="Description for Service 2"
+          />
+        </div>
+        <div className="flex justify-center flex-row mx-auto gap-12">
+          <ServiceCard
+            number={3}
+            imageSrc="/images/general/card-image-3.jpg"
+            title="Service 3"
+            description="Description for Service 3"
+          />
+          <ServiceCard
+            number={4}
+            imageSrc="/images/general/card-image-4.jpg"
+            title="Service 4"
+            description="Description for Service 4"
+          />
+        </div> 
       </div>
     </>
   );

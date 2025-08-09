@@ -60,7 +60,7 @@ function ProductCardsTwo() {
               <Button 
                 className='
                 justify-self-start mt-4 w-[100px] text-theme-blue bg-white
-                rounded-full cursor-pointer
+                rounded-full cursor-pointer font-poppins
                 '>
                 View More
               </Button>

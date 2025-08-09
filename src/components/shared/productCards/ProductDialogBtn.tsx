@@ -17,7 +17,7 @@ function ProductDialogBtn({ title, description, children, buttonText = "View Mor
       <DialogTrigger asChild>
         <Button className='
           justify-self-start mt-4 w-[100px] text-theme-blue
-          bg-white rounded-full cursor-pointer shadow-md
+          bg-white rounded-full cursor-pointer shadow-md font-poppins
           active:bg-theme-blue active:text-white active:shadow-lg active:cursor-pointer
           hover:bg-theme-blue/70 hover:text-white hover:shadow-lg hover:cursor-pointer
           transition-colors duration-200
