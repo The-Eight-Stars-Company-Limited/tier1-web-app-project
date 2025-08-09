@@ -1,6 +1,7 @@
 "use client"
 
 import Image from 'next/image';
+import FooterSection from '@/components/sections/FooterSection';
 
 export default function Products() {
   return (
@@ -29,6 +30,7 @@ export default function Products() {
         <div className="mt-300 bg-white">
           <p>hello</p>
         </div>
+        <FooterSection />
       </div>
     </>
   );
