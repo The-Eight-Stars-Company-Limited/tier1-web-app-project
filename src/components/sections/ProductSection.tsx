@@ -35,11 +35,12 @@ function ProductSection() {
         <div>
           <ProductCardsOne />
           <ProductCardsTwo />
+          <ProductCardsThree />
         </div>
 
         <LineDrawing />
         <div>
-          <ProductCardsThree />
+          
         </div>
       </div>
     </div>
