@@ -1,5 +1,5 @@
 import BlueShade from '@/components/shared/BlueShade'
-import ImageSlider from '@/components/shared/ImageSlider'
+import ImageSlider from '@/components/shared/ImageSLider'
 
 function AboutSection() {
   return (

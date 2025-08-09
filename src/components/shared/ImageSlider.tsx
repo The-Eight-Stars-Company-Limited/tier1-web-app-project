@@ -4,9 +4,9 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
 const images: string[] = [
-    "/images/about/about-image-1.jpg",
-    "/images/about/about-image-2.jpg",
-    "/images/about/about-image-3.jpg"
+  "/images/about/about-image-1.jpg",
+  "/images/about/about-image-2.jpg",
+  "/images/about/about-image-3.jpg"
 ];
 
 const ImageSlider = () => {
