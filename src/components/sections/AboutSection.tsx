@@ -1,5 +1,6 @@
 import BlueShade from '@/components/shared/BlueShade'
-import ImageSlider from '@/components/shared/ImageSlider'
+import ImageSLider from '@/components/shared/ImageSLider'
+
 
 function AboutSection() {
   return (
@@ -40,7 +41,7 @@ function AboutSection() {
             </div>
           </div>
           <div className="w-full lg:w-1/2">
-            <ImageSlider />
+            <ImageSLider />
           </div>
         </div>
       </div>
