@@ -6,7 +6,7 @@ export default function Portfolio() {
   return (
     <>
       <div className="h-[500px] w-full bg-white">
-        <div className="relative w-[95%] h-[400px] mx-auto shadow-2xl rounded-b-[16px] mb-20">
+        <div className="relative w-[95%] h-[400px] mx-auto shadow-2xl rounded-b-[16px] mb-10">
           <div className="relative h-full w-full">
             <Image
               src="/images/general/card-image-2.jpg"
@@ -25,6 +25,9 @@ export default function Portfolio() {
               And help them achieve their project goals.
             </p>
           </div>     
+        </div>
+        <div className="mt-300 bg-white">
+          <p>hello</p>
         </div>
       </div>
     </>
