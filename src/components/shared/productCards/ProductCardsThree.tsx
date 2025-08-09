@@ -11,7 +11,7 @@ function ProductCardsThree() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.0, delay: 0.6 }}
         viewport={{ once: true }}
-        className="flex justify-center mx-auto px-8 gap-6 w-full mb-15">
+        className="flex justify-center mx-auto px-8 gap-6 h-full w-full mb-15">
         {/* Container for product cards */}
         <div className="flex flex-col md:flex-row gap-6 items-center w-full max-w-5xl mx-auto">
         

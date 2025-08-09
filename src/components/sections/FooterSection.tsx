@@ -5,8 +5,7 @@ const footerNavLinks = [
   { href: '/', label: 'Home' },
   { href: '/products', label: 'Products' },
   { href: '/services', label: 'Services' },
-  { href: '/about', label: 'About Us' },
-  { href: '/contact', label: 'Contact Us' },
+  { href: '/portfolio', label: 'Portfolio' },
 ];
 
 const contactInfo = {

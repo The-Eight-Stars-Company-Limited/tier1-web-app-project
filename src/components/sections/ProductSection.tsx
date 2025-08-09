@@ -4,6 +4,7 @@ import LineDrawing from "@/components/shared/LineDrawing";
 import ProductCardsOne from "@/components/shared/productCards/ProductCardsOne";
 import ProductCardsTwo from "@/components/shared/productCards/ProductCardsTwo";
 import ProductCardsThree from "@/components/shared/productCards/ProductCardsThree";
+import ProductCardBuilding from "@/components/shared/productCards/ProductCardBuilding";
 
 function ProductSection() {
   return (
@@ -36,6 +37,7 @@ function ProductSection() {
           <ProductCardsOne />
           <ProductCardsTwo />
           <ProductCardsThree />
+          <ProductCardBuilding />
         </div>
 
         <LineDrawing />
