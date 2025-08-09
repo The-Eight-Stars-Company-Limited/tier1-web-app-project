@@ -1,5 +1,6 @@
 "use client"
 
+import FooterSection from '@/components/sections/FooterSection';
 import Image from 'next/image';
 
 export default function Portfolio() {
@@ -29,6 +30,7 @@ export default function Portfolio() {
         <div className="mt-300 bg-white">
           <p>hello</p>
         </div>
+        <FooterSection />
       </div>
     </>
   );
