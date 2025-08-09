@@ -37,8 +37,7 @@ export default function NavBar() {
           <NavLink href="/" label="Home" />
           <NavLink href="/products" label="Products" />
           <NavLink href="/services" label="Services" />
-          <NavLink href="/about" label="About us" />
-          <NavLink href="/contact" label="Contact us" />
+          <NavLink href="/portfolio" label="Portfolio" />
         </div>
       </div>
     </nav>

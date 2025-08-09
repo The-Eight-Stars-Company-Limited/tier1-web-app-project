@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import ServiceCard from "../shared/ServiceCard";
+import { motion } from "framer-motion";
 
 function ServicesSection() {
   return (
@@ -18,8 +19,8 @@ function ServicesSection() {
         We provide services that are tailored to meet the needs of our clients.
         And help them achieve their project goals
       </p>
-      <div className="w-full mb-60">
-        
+
+      <div className="w-full mb-70">
         {/* Image Section for Services with Text Overlay */}
         <div className="relative w-[75%] h-[350px] mx-auto shadow-2xl rounded-[16px] mb-20">
           <div className="relative h-full w-full">
@@ -43,7 +44,13 @@ function ServicesSection() {
         </div>
 
         {/* Service Cards */}
-        <div className="flex justify-center flex-row mx-auto gap-12 mb-20">
+        <motion.div 
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.9 }}
+          viewport={{ once: true }}
+          className="flex justify-center flex-row mx-auto gap-12 mb-20"
+          >
           <ServiceCard
             number={1}
             imageSrc="/images/general/card-image-1.jpg"
@@ -56,8 +63,15 @@ function ServicesSection() {
             title="Service 2"
             description="Description for Service 2"
           />
-        </div>
-        <div className="flex justify-center flex-row mx-auto gap-12">
+        </motion.div>
+
+        <motion.div 
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.9, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="flex justify-center flex-row mx-auto gap-12"
+          >
           <ServiceCard
             number={3}
             imageSrc="/images/general/card-image-3.jpg"
@@ -70,7 +84,7 @@ function ServicesSection() {
             title="Service 4"
             description="Description for Service 4"
           />
-        </div> 
+        </motion.div> 
       </div>
     </>
   );

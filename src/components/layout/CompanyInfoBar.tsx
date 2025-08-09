@@ -18,7 +18,7 @@ function CompanyInfoBar() {
         
         {/* Company Logo */}
         <div className="flex items-center space-x-2">
-          <div className="md:hidden">
+          <div className="flex justify-end md:hidden">
             <MobileNavMenu />
           </div>
           <Image 
@@ -40,7 +40,7 @@ function CompanyInfoBar() {
                 className={`
                   group
                   h-9 px-3 
-                  bg-theme-yellow text-theme-blue shadow-button 
+                  bg-theme-yellow text-theme-blue shadow-md 
                   hover:text-white hover:shadow-lg hover:cursor-pointer
                   transition-colors duration-200
                   rounded-[var(--radius-button)] 
@@ -81,7 +81,7 @@ function CompanyInfoBar() {
                 className={`
                   group
                   h-9 px-3 
-                  bg-theme-yellow text-theme-blue shadow-button 
+                  bg-theme-yellow text-theme-blue shadow-md 
                   hover:text-white hover:shadow-lg hover:cursor-pointer
                   transition-colors duration-200
                   rounded-[var(--radius-button)] 
@@ -123,7 +123,7 @@ function CompanyInfoBar() {
                 className={`
                   group
                   h-9 px-3 
-                  bg-theme-yellow text-theme-blue shadow-button 
+                  bg-theme-yellow text-theme-blue shadow-md 
                   hover:text-white hover:shadow-lg hover:cursor-pointer
                   transition-colors duration-200
                   rounded-[var(--radius-button)] 

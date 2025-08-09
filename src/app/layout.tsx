@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import CompanyInfoBar from "@/components/layout/CompanyInfoBar";
 import NavBar from "@/components/layout/Navbar";
+import PageTransitionWrapper from "@/components/layout/PageTransitionWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,9 +42,11 @@ export default function RootLayout({
         bg-white text-black
         overflow-x-hidden
       `}>
-        <CompanyInfoBar />
-        <NavBar />
-        {children}
+        <PageTransitionWrapper>
+          <CompanyInfoBar />
+          <NavBar />
+          {children}
+        </PageTransitionWrapper>
       </body>
     </html>
   );
