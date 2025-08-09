@@ -5,6 +5,7 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button'; 
 import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover';
 import { useState } from 'react';
+import MobileNavMenu from './MobileNavMenu';
 
 function CompanyInfoBar() {
   const [isCallUsOpen, setIsCallUsOpen] = useState(false);
@@ -17,6 +18,9 @@ function CompanyInfoBar() {
         
         {/* Company Logo */}
         <div className="flex items-center space-x-2">
+          <div className="flex justify-end md:hidden">
+            <MobileNavMenu />
+          </div>
           <Image 
             src="/helpers/company-logo.svg"
             alt="The Eight Stars Company Limited Logo"
@@ -36,7 +40,7 @@ function CompanyInfoBar() {
                 className={`
                   group
                   h-9 px-3 
-                  bg-theme-yellow text-theme-blue shadow-button 
+                  bg-theme-yellow text-theme-blue shadow-md 
                   hover:text-white hover:shadow-lg hover:cursor-pointer
                   transition-colors duration-200
                   rounded-[var(--radius-button)] 
@@ -77,7 +81,7 @@ function CompanyInfoBar() {
                 className={`
                   group
                   h-9 px-3 
-                  bg-theme-yellow text-theme-blue shadow-button 
+                  bg-theme-yellow text-theme-blue shadow-md 
                   hover:text-white hover:shadow-lg hover:cursor-pointer
                   transition-colors duration-200
                   rounded-[var(--radius-button)] 
@@ -119,7 +123,7 @@ function CompanyInfoBar() {
                 className={`
                   group
                   h-9 px-3 
-                  bg-theme-yellow text-theme-blue shadow-button 
+                  bg-theme-yellow text-theme-blue shadow-md 
                   hover:text-white hover:shadow-lg hover:cursor-pointer
                   transition-colors duration-200
                   rounded-[var(--radius-button)] 

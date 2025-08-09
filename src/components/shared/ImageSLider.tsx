@@ -6,10 +6,10 @@ import React, { useEffect, useState } from 'react';
 const images: string[] = [
     "/images/about/about-image-1.jpg",
     "/images/about/about-image-2.jpg",
-    "/images/about/about-image-1.jpg"
+    "/images/about/about-image-3.jpg"
 ];
 
-const ImageSLider = () => {
+const ImageSlider = () => {
   const [current, setCurrent] = useState<number>(0);
 
   const handleSlideChange = (index: number) => {
@@ -69,4 +69,4 @@ const ImageSLider = () => {
   );
 };
 
-export default ImageSLider;
+export default ImageSlider;

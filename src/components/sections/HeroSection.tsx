@@ -66,7 +66,7 @@ function HeroSection() {
   }, []);
 
   return (
-    <section className="relative w-full h-[550px] overflow-hidden mb-[4%]">
+    <section className="relative w-full h-[550px] overflow-hidden mb-[2%]">
       {/* Image Background with Fade */}
       <AnimatePresence>
         <motion.div
