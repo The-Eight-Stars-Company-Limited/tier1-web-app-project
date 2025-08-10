@@ -1,44 +1,36 @@
 'use client';
 
 import React from 'react';
-import { Button } from "@/components/ui/button";
+import { X } from "lucide-react";
+import ContactForm from "@/components/contact/ContactForm";
 import { 
   DialogContent, 
   DialogHeader, 
-  DialogTitle, 
-  DialogDescription, 
-  DialogFooter, 
-  DialogClose 
+  DialogDescription,
+  DialogClose, 
+  DialogTitle,
 } from "@/components/ui/dialog";
 
+interface ContactDialogProps {
+  formType: "inquiry" | "quote";
+}
 
-export default function ContactDialog() {
+export default function ContactDialog({ formType }: ContactDialogProps) {
   return (
     <>
-      {/* The DialogContent holds all the dialog's elements */}
-      <DialogContent className="sm:max-w-[425px]">
-        {/* The Header for the title and description */}
+      <DialogContent className="sm:max-w-[425px] border-none shadow-none">
         <DialogHeader>
-          <DialogTitle className="font-poppins text-2xl text-theme-blue text-center">
-            Talk with us
-          </DialogTitle>
-          <DialogDescription className="font-poppins text-center">
-            Fill out the form below.
+          <DialogTitle className="sr-only">Contact Form</DialogTitle>
+          <DialogDescription className="font-poppins text-white text-md text-center">
+          {formType === "inquiry" ? "Fill out inquiry form" : "Fill out quote request form"}
           </DialogDescription>
+          <DialogClose className="absolute right-4 top-4 text-white">
+              <X className="h-4 w-4" />
+          </DialogClose>
         </DialogHeader>
 
-        {/* The form will go here */}
-        <p>Form will be inserted here.</p>
-
-        {/* The Footer for action buttons */}
-        <DialogFooter className="mt-4">
-          <DialogClose asChild>
-            <Button type="button" variant="outline" className="rounded-full font-poppins">
-              Cancel
-            </Button>
-          </DialogClose>
-          {/* The submit button will be added here */}
-        </DialogFooter>
+        {/* Form */}
+        <ContactForm formType={formType} />
       </DialogContent>
     </>
   );
