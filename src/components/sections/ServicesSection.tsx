@@ -20,7 +20,7 @@ function ServicesSection() {
         And help them achieve their project goals
       </p>
 
-      <div className="w-full mb-70">
+      <div className="w-full mb-40">
         {/* Image Section for Services with Text Overlay */}
         <div className="relative w-[75%] h-[350px] mx-auto shadow-2xl rounded-[16px] mb-20">
           <div className="relative h-full w-full">
@@ -49,7 +49,7 @@ function ServicesSection() {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.9 }}
           viewport={{ once: true }}
-          className="flex justify-center flex-row mx-auto gap-12 mb-20"
+          className="flex justify-center flex-row mx-auto gap-14 mb-20"
           >
           <ServiceCard
             number={1}
@@ -70,7 +70,7 @@ function ServicesSection() {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.9, delay: 0.5 }}
           viewport={{ once: true }}
-          className="flex justify-center flex-row mx-auto gap-12"
+          className="flex justify-center flex-row mx-auto gap-14"
           >
           <ServiceCard
             number={3}

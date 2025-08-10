@@ -1,3 +1,4 @@
+import ContactTrigger from '@/components/contact/ContactTrigger';
 import About from '@/components/sections/AboutSection';
 import FooterSection from '@/components/sections/FooterSection';
 import HeroSection from '@/components/sections/HeroSection'; 
@@ -11,6 +12,7 @@ export default function Home() {
       <About />
       <ProductSection />
       <ServicesSection />
+      <ContactTrigger />
       <FooterSection />
     </main>
   );
