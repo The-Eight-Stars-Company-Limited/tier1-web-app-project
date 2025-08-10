@@ -2,6 +2,9 @@
 
 import FooterSection from '@/components/sections/FooterSection';
 import Image from 'next/image';
+import { Dialog, DialogTrigger, DialogOverlay } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import FuturisticContactDialog from "@/components/contact/FuturisticContactDialog";
 
 export default function Portfolio() {
   return (
@@ -27,8 +30,23 @@ export default function Portfolio() {
             </p>
           </div>     
         </div>
-        <div className="mt-300 bg-white">
-          <p>hello</p>
+        <div className="mt-300 bg-white flex justify-center mb-20">
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button className="
+              bg-black text-white rounded-full 
+                font-poppins px-8 py-6 shadow-lg cursor-pointer
+              hover:bg-gray-800
+              active:bg-gray-900 
+                active:ring-1 active:ring-white
+                transition-colors duration-100
+              ">
+                Forms
+              </Button>
+            </DialogTrigger>
+            <DialogOverlay className="bg-black/70 backdrop-blur-md" />
+            <FuturisticContactDialog />
+          </Dialog>
         </div>
         <FooterSection />
       </div>
