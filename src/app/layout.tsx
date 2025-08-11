@@ -28,6 +28,21 @@ export const metadata: Metadata = {
     icon: '/favicon-1.png',
   },
   description: 'Your one stop for all your Building, Construction & Electrical Materials',
+  openGraph: {
+    title: 'The Eight Stars Company Limited',
+    description: 'Your one stop for all your Building, Construction & Electrical Materials',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'The Eight Stars Company Limited',
+    images: [
+      {
+        url: '/images/general/services-2.png',
+        width: 1200,
+        height: 630,
+        alt: 'The Eight Stars Company Limited',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
