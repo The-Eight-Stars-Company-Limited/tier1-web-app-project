@@ -34,9 +34,10 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'The Eight Stars Company Limited',
+    url: 'https://eightstars.vercel.app',
     images: [
       {
-        url: 'https://eightstars.vercel.app/images/general/services-2.png',
+        url: 'https://eightstars.vercel.app/images/general/services-3.jpg',
         width: 1200,
         height: 630,
         alt: 'The Eight Stars Company Limited',
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: [
       {
-        url: 'https://eightstars.vercel.app/images/general/services-2.png',
+        url: 'https://eightstars.vercel.app/images/general/services-3.jpg',
         width: 1200,
         height: 630,
         alt: 'The Eight Stars Company Limited',
