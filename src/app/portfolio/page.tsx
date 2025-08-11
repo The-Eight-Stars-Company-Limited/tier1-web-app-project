@@ -2,6 +2,7 @@
 
 import FooterSection from '@/components/sections/FooterSection';
 import Image from 'next/image';
+import SquareCard from '@/components/shared/SquareCard';
 
 export default function Portfolio() {
   return (
@@ -27,8 +28,22 @@ export default function Portfolio() {
             </p>
           </div>     
         </div>
-        <div className="mt-300 bg-white">
-          <p>hello</p>
+        <div className="flex justify-center items-center mt-20 mx-auto w-full">
+          <p className='font-poppins text-4xl font-semibold text-theme-blue/80 text-shadow-md'>Projects</p>
+        </div>
+
+        {/* Projects */}
+        <div>
+          <div className="mt-10 mb-20 bg-white mx-auto flex justify-center items-center gap-10">
+            <SquareCard src="/images/products/build-image-1.jpeg" />
+            <SquareCard src="/images/products/build-image-4.jpg" />
+            <SquareCard src="/images/products/build-image-3.jpg" />
+          </div>
+          <div className="mt-10 mb-20 bg-white mx-auto flex justify-center items-center gap-10">
+            <SquareCard src="/images/products/build-image-4.jpg" />
+            <SquareCard src="/images/products/build-image-2.jpeg" />
+            <SquareCard src="/images/products/build-image-1.jpeg" />
+          </div>
         </div>
         <FooterSection />
       </div>

@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import FooterSection from '@/components/sections/FooterSection';
+import ServiceCard from '@/components/shared/ServiceCard';
 
 export default function Services() {
   return (
@@ -27,8 +28,41 @@ export default function Services() {
             </p>
           </div>     
         </div>
-        <div className="mt-300 bg-white">
-          <p>hello</p>
+
+        <div className="flex justify-center items-center mt-20 mb-20 mx-auto w-full">
+          <p className='font-poppins text-4xl font-semibold text-theme-blue/80 text-shadow-md'>Services We offer</p>
+        </div>
+
+        {/* Service Cards */}
+        <div>
+          <div className="mt-10 flex justify-center flex-row mx-auto gap-14 mb-20">
+            <ServiceCard
+              number={1}
+              imageSrc="/images/general/card-image-1.jpg"
+              title="Service 1"
+              description="Description for Service 1"
+            />
+            <ServiceCard
+              number={2}
+              imageSrc="/images/general/card-image-2.jpg"
+              title="Service 2"
+              description="Description for Service 2"
+            />
+          </div>
+          <div className="mt-10 flex justify-center flex-row mx-auto gap-14 mb-20">
+            <ServiceCard
+              number={1}
+              imageSrc="/images/general/card-image-3.jpg"
+              title="Service 1"
+              description="Description for Service 1"
+            />
+            <ServiceCard
+              number={2}
+              imageSrc="/images/general/card-image-4.jpg"
+              title="Service 2"
+              description="Description for Service 2"
+            />
+          </div>
         </div>
         <FooterSection />
       </div>
