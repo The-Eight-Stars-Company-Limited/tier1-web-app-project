@@ -36,7 +36,20 @@ export const metadata: Metadata = {
     siteName: 'The Eight Stars Company Limited',
     images: [
       {
-        url: '/images/general/services-2.png',
+        url: 'https://eightstars.vercel.app/images/general/services-2.png',
+        width: 1200,
+        height: 630,
+        alt: 'The Eight Stars Company Limited',
+      },
+    ],
+  },
+  twitter: {
+    title: 'The Eight Stars Company Limited',
+    description: 'Your one stop for all your Building, Construction & Electrical Materials',
+    card: 'summary_large_image',
+    images: [
+      {
+        url: 'https://eightstars.vercel.app/images/general/services-2.png',
         width: 1200,
         height: 630,
         alt: 'The Eight Stars Company Limited',
