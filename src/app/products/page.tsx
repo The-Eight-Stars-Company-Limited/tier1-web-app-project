@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import FooterSection from '@/components/sections/FooterSection';
+import RectangularCard from '@/components/shared/RectangularCard';
 
 export default function Products() {
   return (
@@ -27,8 +28,19 @@ export default function Products() {
             </p>
           </div>     
         </div>
-        <div className="mt-300 bg-white">
-          <p>hello</p>
+        <div>
+          <div className="mt-10 mb-10 flex justify-center items-center mx-auto w-full gap-10">
+            <RectangularCard src="/images/products/rm-blocks-1.png" />
+            <RectangularCard src="/images/products/rm-blocks-1.png" />
+          </div>
+          <div className="mt-10 mb-10 flex justify-center items-center mx-auto w-full gap-10">
+            <RectangularCard src="/images/products/rm-blocks-1.png" />
+            <RectangularCard src="/images/products/rm-blocks-1.png" />
+          </div>
+          <div className="mt-10 mb-30 flex justify-center items-center mx-auto w-full gap-10">
+            <RectangularCard src="/images/products/rm-blocks-1.png" />
+            <RectangularCard src="/images/products/rm-blocks-1.png" />
+          </div>
         </div>
         <FooterSection />
       </div>

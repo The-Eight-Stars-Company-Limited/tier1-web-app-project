@@ -70,7 +70,7 @@ function ProductCardsOne() {
         
         {/* First Square Card */}
         <div 
-        className="
+         className="
           bg-theme-yellow rounded-[32px] shadow-lg w-[25%] h-[250px] 
           overflow-hidden flex items-center justify-center p-4
           ">
