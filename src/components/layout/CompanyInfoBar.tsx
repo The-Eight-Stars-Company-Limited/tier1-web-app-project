@@ -14,10 +14,10 @@ function CompanyInfoBar() {
   
   return (
     <div className="bg-white py-2 border-b border-gray-100">
-      <div className="container mx-auto flex items-center justify-between text-sm px-4 md:px-6 lg:px-8">
+      <div className="container mx-auto flex items-center justify-between px-1 text-sm md:px-2 lg:px-1">
         
         {/* Company Logo */}
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center">
           <div className="flex justify-end md:hidden">
             <MobileNavMenu />
           </div>
@@ -32,7 +32,7 @@ function CompanyInfoBar() {
         </div>
 
         {/* Contact Action Buttons */}
-        <div className="hidden md:flex space-x-2 md:space-x-4">
+        <div className="hidden md:flex md:space-x-4">
           {/* Call us Button */}
           <Popover open={isCallUsOpen} onOpenChange={setIsCallUsOpen}>
             <PopoverTrigger asChild>
@@ -152,7 +152,7 @@ function CompanyInfoBar() {
             "
             >
               <p className="text-sm font-semibold font-poppins text-white">Our office is located at:</p>
-              <p className="text-md text-white mt-2">123 Main St, Anytown, USA</p>
+              <p className="text-md text-white mt-2">123 Main St, Kumasi, Ghana</p>
             </PopoverContent>
           </Popover>
         </div>
