@@ -27,7 +27,6 @@ function ContactForm({ formType }: ContactFormProps) {
     console.log("Form Data:", data);
 
     // TODO: Add Supabase logic here to send data to the database
-    // For now, let's just show a success toast
     toast.success("Your message has been sent successfully!");
 
     // Reset the form after submission
