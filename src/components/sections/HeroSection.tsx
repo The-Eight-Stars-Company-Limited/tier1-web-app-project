@@ -11,7 +11,6 @@ interface Slide {
   subheading: string;
 }
 
-// Slide Content
 const slides: Slide[] = [
   {
     id: 1,
@@ -33,14 +32,13 @@ const slides: Slide[] = [
   },
 ];
 
-// Animation variants for Framer Motion
 const textVariants = {
   initial: { x: "100%", opacity: 0 },
   animate: {
     x: "0%",
     opacity: 1,
     transition: {
-      delay: 1.0, // Delay text entrance until image is fully visible
+      delay: 1.0,
       duration: 0.8,
     },
   },
@@ -66,7 +64,7 @@ function HeroSection() {
   }, []);
 
   return (
-    <section className="relative w-full h-[550px] overflow-hidden mb-[2%]">
+    <section className="relative w-full min-h-screen overflow-hidden mb-[2%]">
       {/* Image Background with Fade */}
       <AnimatePresence>
         <motion.div
@@ -75,7 +73,7 @@ function HeroSection() {
           initial="initial"
           animate="animate"
           exit="exit"
-          className="absolute inset-0"
+          className="absolute inset-0 min-w-full min-h-full"
         >
           <Image
             src={currentSlide.imageSrc}
@@ -85,13 +83,13 @@ function HeroSection() {
             priority={currentSlideIndex === 0}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
           />
-          {/* Optional: Dark overlay for better text readability */}
-          <div className="absolute inset-0 bg-black opacity-40"></div>
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black opacity-50 sm:opacity-40"></div>
         </motion.div>
       </AnimatePresence>
 
-      {/* Text Overlay with Slide */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-4 z-10">
+      {/* Text Overlay */}
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 sm:px-6 md:px-8 z-10">
         <AnimatePresence>
           <motion.div
             key={currentSlide.id + '-text'}
@@ -99,12 +97,12 @@ function HeroSection() {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="flex flex-col items-center"
+            className="flex flex-col items-center max-w-3xl"
           >
-            <h1 className="text-white text-3xl md:text-5xl font-extrabold font-poppins drop-shadow-md">
+            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-extrabold font-poppins drop-shadow-md leading-tight">
               {currentSlide.heading}
             </h1>
-            <p className="text-white text-xl md:text-2xl mt-2 font-medium font-poppins drop-shadow-md">
+            <p className="text-white text-lg sm:text-xl md:text-2xl mt-2 font-medium font-poppins drop-shadow-md max-w-lg">
               {currentSlide.subheading}
             </p>
           </motion.div>

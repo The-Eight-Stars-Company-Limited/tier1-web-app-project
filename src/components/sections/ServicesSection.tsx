@@ -7,13 +7,13 @@ import { motion } from "framer-motion";
 function ServicesSection() {
   return (
     <>
-      <div className="inline-flex items-center justify-center px-[20px] py-[5px] font-poppins 
-        text-lg text-[#072C8B] font-semibold m-auto border-2 border-[#072C8B] 
+      <div className="inline-flex items-center justify-center px-[20px] py-[5px] font-poppins
+        text-lg text-[#072C8B] font-semibold m-auto border-2 border-[#072C8B]
         w-[170px] h-[60px] rounded-full mt-5
         ">
         Our Services
       </div>
-      <p className="text-[#072C8B] font-poppins text-xl mb-10 leading-8 
+      <p className="text-[#072C8B] font-poppins text-xl mb-10 leading-8
         text-shadow-sm text-center w-[52%] mx-auto
         ">
         We provide services that are tailored to meet the needs of our clients.
@@ -40,16 +40,16 @@ function ServicesSection() {
               We provide services that are tailored to meet the needs of our clients.
               And help them achieve their project goals.
             </p>
-          </div>     
+          </div>
         </div>
 
         {/* Service Cards */}
-        <motion.div 
+        <motion.div
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.9 }}
           viewport={{ once: true }}
-          className="flex justify-center flex-row mx-auto gap-14 mb-20"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center w-[75%] max-w-6xl mx-auto"
           >
           <ServiceCard
             number={1}
@@ -63,16 +63,7 @@ function ServicesSection() {
             title="Service 2"
             description="Description for Service 2"
           />
-        </motion.div>
-
-        <motion.div 
-          initial={{ x: 100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.9, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="flex justify-center flex-row mx-auto gap-14"
-          >
-          <ServiceCard
+           <ServiceCard
             number={3}
             imageSrc="/images/general/card-image-3.jpg"
             title="Service 3"
@@ -84,7 +75,7 @@ function ServicesSection() {
             title="Service 4"
             description="Description for Service 4"
           />
-        </motion.div> 
+        </motion.div>
       </div>
     </>
   );

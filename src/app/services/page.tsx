@@ -26,7 +26,7 @@ export default function Services() {
               We provide services that are tailored to meet the needs of our clients.
               And help them achieve their project goals.
             </p>
-          </div>     
+          </div>
         </div>
 
         <div className="flex justify-center items-center mt-20 mb-20 mx-auto w-full">
@@ -34,35 +34,31 @@ export default function Services() {
         </div>
 
         {/* Service Cards */}
-        <div>
-          <div className="mt-10 flex justify-center flex-row mx-auto gap-14 mb-20">
-            <ServiceCard
-              number={1}
-              imageSrc="/images/general/card-image-1.jpg"
-              title="Service 1"
-              description="Description for Service 1"
-            />
-            <ServiceCard
-              number={2}
-              imageSrc="/images/general/card-image-2.jpg"
-              title="Service 2"
-              description="Description for Service 2"
-            />
-          </div>
-          <div className="mt-10 flex justify-center flex-row mx-auto gap-14 mb-20">
-            <ServiceCard
-              number={1}
-              imageSrc="/images/general/card-image-3.jpg"
-              title="Service 1"
-              description="Description for Service 1"
-            />
-            <ServiceCard
-              number={2}
-              imageSrc="/images/general/card-image-4.jpg"
-              title="Service 2"
-              description="Description for Service 2"
-            />
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center w-[75%] max-w-6xl mx-auto mb-20">
+          <ServiceCard
+            number={1}
+            imageSrc="/images/general/card-image-1.jpg"
+            title="Service 1"
+            description="Description for Service 1"
+          />
+          <ServiceCard
+            number={2}
+            imageSrc="/images/general/card-image-2.jpg"
+            title="Service 2"
+            description="Description for Service 2"
+          />
+          <ServiceCard
+            number={3}
+            imageSrc="/images/general/card-image-3.jpg"
+            title="Service 3"
+            description="Description for Service 3"
+          />
+          <ServiceCard
+            number={4}
+            imageSrc="/images/general/card-image-4.jpg"
+            title="Service 4"
+            description="Description for Service 4"
+          />
         </div>
         <FooterSection />
       </div>

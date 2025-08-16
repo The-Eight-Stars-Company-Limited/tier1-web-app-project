@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from 'next/image';
 import { Phone, Mail, MapPin } from 'lucide-react';
@@ -6,28 +6,31 @@ import MobileNavMenu from './MobileNavMenu';
 import { ContactButton } from './ContactButton';
 
 function CompanyInfoBar() {
-  
   return (
     <div className="bg-white py-2 border-b border-gray-100">
-      <div className="container mx-auto flex items-center justify-between px-1 text-sm md:px-2 lg:px-1">
-        
-        {/* Company Logo */}
-        <div className="flex items-center">
-          <div className="flex justify-end md:hidden">
+      <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-10 text-sm">
+
+        {/* Company Logo and Mobile Menu */}
+        <div className="w-full flex items-center justify-between px-4 py-2">
+          <div className="flex-shrink-0">
+            <Image
+              src="/helpers/company-logo.svg"
+              alt="The Eight Stars Company Limited Logo"
+              width={110}
+              height={30}
+              className="h-auto w-auto max-w-[110px]"
+              priority
+            />
+          </div>
+
+          <div className="md:hidden flex-shrink-0">
             <MobileNavMenu />
           </div>
-          <Image 
-            src="/helpers/company-logo.svg"
-            alt="The Eight Stars Company Limited Logo"
-            width={110}
-            height={10}
-            className="h-auto "
-            priority         
-          />
         </div>
 
+
         {/* Contact Action Buttons */}
-        <div className="hidden md:flex md:space-x-4">
+        <div className="hidden md:flex md:space-x-6 lg:space-x-4">
           {/* Call us Button */}
           <ContactButton
             buttonLabel="Call us"

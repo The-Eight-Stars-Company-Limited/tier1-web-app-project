@@ -7,7 +7,7 @@ import ServicesSection from '@/components/sections/ServicesSection';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between gap-10">
+    <main className="flex min-h-screen flex-col items-center justify-between gap-10 overflow-hidden">
       <HeroSection /> 
       <About />
       <ProductSection />

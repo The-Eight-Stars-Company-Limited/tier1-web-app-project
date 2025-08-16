@@ -4,9 +4,9 @@ import Image from "next/image";
 function SquareCard({ src }: { src: string }) {
   return (
     <>
-      <div 
+      <div
         className="
-        bg-theme-yellow rounded-[32px] shadow-lg w-[30%] h-[300px] 
+        bg-theme-yellow rounded-[32px] shadow-lg w-full h-[300px]
         overflow-hidden flex items-center justify-center p-4
         ">
         <div className="relative w-full h-full">
