@@ -16,8 +16,8 @@ function NavLink({ href, label, onLinkClick }: { href: string, label: string, on
       onClick={onLinkClick}
       aria-current={isActive ? 'page' : undefined}
       className={`
-        group relative block w-full text-center px-6 py-4 my-3 rounded-full font-poppins text-lg font-semibold overflow-hidden
-        transition-colors duration-300
+        group relative block w-full text-center px-6 py-4 my-3 rounded-full font-poppins text-lg 
+        font-semibold overflow-hidden transition-colors duration-300
         ${isActive
           ? 'bg-theme-blue text-white border border-theme-blue ring-2 ring-white'
           : 'text-theme-blue hover:text-white hover:bg-theme-blue/80'
@@ -29,8 +29,8 @@ function NavLink({ href, label, onLinkClick }: { href: string, label: string, on
         aria-hidden="true"
         className="
           pointer-events-none absolute inset-0 flex items-center justify-center
-      text-6xl font-bold uppercase text-theme-blue/10 opacity-0
-      group-hover:opacity-20 transition-opacity duration-300 z-0
+          text-6xl font-bold uppercase text-theme-blue/10 opacity-0
+          group-hover:opacity-20 transition-opacity duration-300 z-0
         "
       >
         {label}
@@ -54,7 +54,9 @@ export default function MobileNavMenu() {
       <SheetTrigger asChild>
         <button
           aria-label="Open menu"
-          className="ml-auto flex items-center justify-center p-2 rounded-full text-theme-blue hover:bg-theme-blue/20 focus:outline-none focus:ring-2 focus:ring-theme-blue"
+          className="ml-auto flex items-center justify-center p-2 rounded-full 
+          text-theme-blue hover:bg-theme-blue/20 
+          focus:outline-none focus:ring-2 focus:ring-theme-blue"
         >
           <Menu size={30} />
         </button>
@@ -69,7 +71,10 @@ export default function MobileNavMenu() {
         "
       >
         <SheetHeader>
-          <SheetTitle className="text-2xl font-bold text-theme-blue font-poppins mb-6 text-center">
+          <SheetTitle className="
+            text-2xl font-bold text-theme-blue 
+            font-poppins mb-6 text-center
+            ">
             Menu
           </SheetTitle>
         </SheetHeader>

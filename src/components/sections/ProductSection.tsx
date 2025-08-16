@@ -15,10 +15,10 @@ function ProductSection() {
       ">
         Our Products
       </div>
-      <div className="sm:w-full md:w-[50%] mx-auto md:text-center">
+      <div className="sm:w-[80%] md:w-[52%] mx-auto md:text-center">
         <p className="text-white font-poppins text-xl mb-10 leading-8 text-shadow-md">
           Discover our extensive range of high-quality building and construction materials,
-          including blocks, pipes, electricals, and more. <br /><br />Our products are sourced from
+          including blocks, pipes, electricals, and more. Our products are sourced from
           trusted manufacturers to ensure durability and reliability for all your projects.
         </p>
       </div>

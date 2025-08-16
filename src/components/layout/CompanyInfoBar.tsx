@@ -8,10 +8,10 @@ import { ContactButton } from './ContactButton';
 function CompanyInfoBar() {
   return (
     <div className="bg-white py-2 border-b border-gray-100">
-      <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-10 text-sm">
+      <div className="container mx-auto flex items-center justify-between px-2 md:px-2 lg:px-2 text-sm">
 
         {/* Company Logo and Mobile Menu */}
-        <div className="w-full flex items-center justify-between px-4 py-2">
+        <div className="w-full flex items-center justify-between py-2">
           <div className="flex-shrink-0">
             <Image
               src="/helpers/company-logo.svg"
