@@ -26,7 +26,7 @@ export default function Products() {
               We provide services that are tailored to meet the needs of our clients.
               And help them achieve their project goals.
             </p>
-          </div>     
+          </div>
         </div>
         <div>
           <div className="mt-10 mb-10 flex justify-center items-center mx-auto w-full gap-10">

@@ -5,44 +5,40 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 function ProductCardBuilding() {
-    return (
-      <>
-      <motion.div 
-          whileHover={{ scale: 1.06 }}
-          className="
-          bg-theme-yellow rounded-[32px] shadow-lg w-[50%] h-[250px] 
-            flex overflow-hidden mx-auto mb-15 pb-10 mt-22">
-            {/* Text on the left */}
-            <div className="flex-1 p-6 pr-0 flex flex-col justify-end">
-              <p className="font-poppins text-xl font-semibold text-theme-blue">
-                All Building Materials
-              </p>
-              <p className="font-poppins text-sm mt-0.5 text-theme-blue w-[250px]">
-                We offer a wide range of building materials to meet your needs.
-              </p>
-              <Button 
-                className='
-                justify-self-start mt-4 w-[100px] text-theme-blue bg-white
-                rounded-full cursor-pointer font-poppins
-                '>
-                View More
-              </Button>
-            </div>
-              
-            {/* Image on the right */}
-            <div className="relative w-[50%] h-full flex items-center justify-center pr-4">
-              <Image
-                src="/images/products/rm-blocks-2.png"
-                alt="Concrete Blocks"
-                objectFit="contain"
-                width={320}
-                height={320}
-              />
-            </div>
-          </motion.div>
-      </>
-    );
+  return (
+    <motion.div
+      whileHover={{ scale: 1.03 }}
+      className="
+        bg-theme-yellow rounded-[32px] shadow-lg
+        flex flex-col md:flex-row overflow-hidden
+        w-full  md:h-[250px]
+        mx-auto mb-20 max-w-6xl"
+    >
+      {/* Image on top (mobile), right (desktop) */}
+      <div className="relative w-full md:w-1/2 h-[200px] md:h-full flex items-center justify-center">
+        <Image
+          src="/images/products/rm-blocks-2.png"
+          alt="All Building Materials"
+          layout="fill"
+          objectFit="contain"
+          className="object-contain"
+        />
+      </div>
+
+      {/* Text content */}
+      <div className="flex flex-col justify-center items-start p-6 md:w-1/2 text-theme-blue">
+        <p className="font-poppins text-xl font-semibold mb-2">
+          All Building Materials
+        </p>
+        <p className="font-poppins text-sm max-w-[250px]">
+          We offer a wide range of building materials to meet your needs.
+        </p>
+        <Button className="mt-4 w-[120px] rounded-full bg-white text-theme-blue font-poppins">
+          View More
+        </Button>
+      </div>
+    </motion.div>
+  );
 }
 
 export default ProductCardBuilding;
-

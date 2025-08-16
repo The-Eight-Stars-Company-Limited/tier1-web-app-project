@@ -16,14 +16,28 @@ function NavLink({ href, label, onLinkClick }: { href: string, label: string, on
       onClick={onLinkClick}
       aria-current={isActive ? 'page' : undefined}
       className={`
-        block w-full text-center px-4 py-2 my-2 rounded-full transition-colors duration-200 font-poppins text-lg
+        group relative block w-full text-center px-6 py-4 my-3 rounded-full font-poppins text-lg font-semibold overflow-hidden
+        transition-colors duration-300
         ${isActive
-          ? 'bg-nav-active-bg text-white border border-nav-active-border ring-2 ring-white'
-          : 'text-theme-blue hover:text-white hover:bg-theme-blue/10'
+          ? 'bg-theme-blue text-white border border-theme-blue ring-2 ring-white'
+          : 'text-theme-blue hover:text-white hover:bg-theme-blue/80'
         }
       `}
     >
-      {label}
+      {/* Watermark */}
+      <span
+        aria-hidden="true"
+        className="
+          pointer-events-none absolute inset-0 flex items-center justify-center
+      text-6xl font-bold uppercase text-theme-blue/10 opacity-0
+      group-hover:opacity-20 transition-opacity duration-300 z-0
+        "
+      >
+        {label}
+      </span>
+
+      {/* Actual label */}
+      <span className="relative z-10">{label}</span>
     </Link>
   );
 }
@@ -38,26 +52,35 @@ export default function MobileNavMenu() {
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
-        <button className="flex items-center justify-center p-2 rounded-full text-theme-blue hover:bg-gray-100">
-          <Menu size={24} />
+        <button
+          aria-label="Open menu"
+          className="ml-auto flex items-center justify-center p-2 rounded-full text-theme-blue hover:bg-theme-blue/20 focus:outline-none focus:ring-2 focus:ring-theme-blue"
+        >
+          <Menu size={30} />
         </button>
       </SheetTrigger>
-      <SheetContent 
-        side="left" 
-        className="bg-white/95 backdrop-blur-md border-r-4 border-theme-yellow w-[250px] sm:w-[300px]"
+
+      <SheetContent
+        /* side="right" */
+        className="
+          fixed inset-0 z-50 bg-white/95 backdrop-blur-md
+          flex flex-col items-center justify-start pt-24
+          w-full h-full
+        "
       >
         <SheetHeader>
-          <SheetTitle className="text-xl font-bold text-center text-theme-blue font-poppins">
+          <SheetTitle className="text-2xl font-bold text-theme-blue font-poppins mb-6 text-center">
             Menu
           </SheetTitle>
         </SheetHeader>
-        <div className="flex flex-col items-center mt-8">
+
+        <nav className="flex flex-col items-center w-full px-8">
           <NavLink href="/" label="Home" onLinkClick={handleLinkClick} />
           <NavLink href="/products" label="Products" onLinkClick={handleLinkClick} />
           <NavLink href="/services" label="Services" onLinkClick={handleLinkClick} />
           <NavLink href="/about" label="About us" onLinkClick={handleLinkClick} />
           <NavLink href="/contact" label="Contact us" onLinkClick={handleLinkClick} />
-        </div>
+        </nav>
       </SheetContent>
     </Sheet>
   );
