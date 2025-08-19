@@ -41,15 +41,15 @@ export default function Products() {
             
             {/* These cards will be hidden on mobile */}
             <RectangularCard 
-              className="hidden" 
+              className="hidden md:flex" 
               src="/images/products/rm-blocks-1.png" 
             />
             <RectangularCard 
-              className="hidden" 
+              className="hidden md:flex" 
               src="/images/products/rm-blocks-1.png" 
             />
             <RectangularCard 
-              className="hidden" 
+              className="hidden md:flex" 
               src="/images/products/rm-blocks-1.png" 
             />
           </div>
