@@ -17,7 +17,14 @@ function ProductCardsTwo() {
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr_2fr] gap-6 w-full">
 
           {/* First Square Card */}
-          <div className="max-sm:order-3 bg-theme-yellow rounded-[32px] shadow-lg overflow-hidden flex items-center justify-center p-4 h-[250px]">
+          <div className="max-sm:order-3 
+            bg-theme-yellow rounded-[32px] shadow-lg 
+            overflow-hidden flex items-center justify-center mx-auto
+            h-[220px] w-[260px]
+            p-2 
+
+            md:h-[250px] md:w-[265px] md:p-4
+            ">
             <div className="relative w-full h-full">
               <Image
                 src="/images/products/build-image-1.jpeg"
@@ -30,7 +37,14 @@ function ProductCardsTwo() {
           </div>
 
           {/* Second Square Card */}
-          <div className="max-sm:order-2 bg-theme-yellow rounded-[32px] shadow-lg overflow-hidden flex items-center justify-center p-4 h-[250px]">
+          <div className="max-sm:order-2 
+          bg-theme-yellow rounded-[32px] shadow-lg 
+            overflow-hidden flex items-center justify-center mx-auto
+            h-[220px] w-[260px]
+            p-2 
+
+            md:h-[250px] md:w-[265px] md:p-4 
+            ">
             <div className="relative w-full h-full">
               <Image
                 src="/images/products/build-image-2.jpeg"
