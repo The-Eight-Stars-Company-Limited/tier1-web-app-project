@@ -11,7 +11,13 @@ interface ServiceCardProps {
 
 function ServiceCard({ number, imageSrc, title, description }: ServiceCardProps) {
   return (
-    <div className="relative w-full bg-theme-blue rounded-[32px] shadow-xl flex flex-col">
+    <div className="
+      relative w-[85%] 
+      bg-theme-blue rounded-[32px] 
+      shadow-xl flex flex-col mb-10
+
+      md:w-full 
+      ">
 
       {/* Circular Number Badge */}
       <div className="absolute top-[-12px] left-[-12px] z-100 w-12 h-12 bg-theme-blue rounded-full flex items-center justify-center shadow-md">
@@ -42,8 +48,16 @@ function ServiceCard({ number, imageSrc, title, description }: ServiceCardProps)
         {/* Button */}
         <div className="mt-4">
           <button
-            className="bg-white text-theme-blue font-poppins text-sm font-medium px-4 py-2 rounded-full shadow-md hover:bg-gray-100 transition"
-          >
+            className="
+            flex justify-end items-center
+            bg-white text-theme-blue text-sm 
+            font-poppins font-medium 
+            px-4 py-2 rounded-full shadow-md 
+            hover:bg-gray-100 transition
+            ml-20
+
+            md:ml-12
+            ">
             Read more
           </button>
         </div>

@@ -24,7 +24,12 @@ const ImageSLider = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[400px] sm:h-[450px] lg:h-[500px] flex items-center justify-center overflow-visible py-6 sm:py-8 my-6 rounded-[20px] sm:rounded-[25px] lg:rounded-[30px]">
+    <div className="
+      relative w-full h-[400px] lg:h-[400px] 
+      flex items-center justify-center overflow-visible 
+      py-6 sm:py-8 my-6 rounded-[20px] sm:rounded-[25px] lg:rounded-[30px]
+      mt-0
+      ">
 
       {images.map((img, index) => {
         const isActive = index === current;
@@ -59,8 +64,8 @@ const ImageSLider = () => {
           <span
             key={index}
             className={`
-              h-2 w-2 rounded-full transition-all duration-300 ease-in-out cursor-pointer
-              ${current === index ? 'bg-white w-5' : 'bg-white/40'}
+              h-3 w-3 rounded-full shadow-md transition-all duration-300 ease-in-out cursor-pointer
+              ${current === index ? 'bg-theme-yellow/90 w-7' : 'bg-theme-yellow/40 w-3'}
             `}
             onClick={() => handleSlideChange(index)}
           ></span>

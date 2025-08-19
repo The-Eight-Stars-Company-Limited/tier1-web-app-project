@@ -28,20 +28,32 @@ export default function Products() {
             </p>
           </div>
         </div>
-        <div>
-          <div className="mt-10 mb-10 flex justify-center items-center mx-auto w-full gap-10">
+        
+          <div className="
+            flex flex-col items-center gap-10
+            md:grid md:grid-cols-2 md:gap-10 px-10
+            mt-10 mb-30 mx-auto w-full md:px-20
+            ">
+            {/* show the first three cards on mobile */}
             <RectangularCard src="/images/products/rm-blocks-1.png" />
             <RectangularCard src="/images/products/rm-blocks-1.png" />
+            <RectangularCard src="/images/products/rm-blocks-1.png" />
+            
+            {/* hidden on mobile, exposed on medium and large screen */}
+            <RectangularCard 
+              className="hidden md:flex" 
+              src="/images/products/rm-blocks-1.png" 
+            />
+            <RectangularCard 
+              className="hidden md:flex" 
+              src="/images/products/rm-blocks-1.png" 
+            />
+            <RectangularCard 
+              className="hidden md:flex" 
+              src="/images/products/rm-blocks-1.png" 
+            />
           </div>
-          <div className="mt-10 mb-10 flex justify-center items-center mx-auto w-full gap-10">
-            <RectangularCard src="/images/products/rm-blocks-1.png" />
-            <RectangularCard src="/images/products/rm-blocks-1.png" />
-          </div>
-          <div className="mt-10 mb-30 flex justify-center items-center mx-auto w-full gap-10">
-            <RectangularCard src="/images/products/rm-blocks-1.png" />
-            <RectangularCard src="/images/products/rm-blocks-1.png" />
-          </div>
-        </div>
+        
         <FooterSection />
       </div>
     </>

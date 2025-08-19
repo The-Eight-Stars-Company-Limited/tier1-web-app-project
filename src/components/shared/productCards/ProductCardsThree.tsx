@@ -70,7 +70,14 @@ function ProductCardsThree() {
           </motion.div>
 
           {/* First Square Card */}
-          <div className="bg-theme-yellow rounded-[32px] shadow-lg overflow-hidden flex items-center justify-center p-4 h-[250px]">
+          <div className="
+            bg-theme-yellow rounded-[32px] shadow-lg 
+            overflow-hidden flex items-center justify-center 
+            h-[200px] w-[200px]
+            p-2 
+
+            md:h-[250px] md:w-[265px] md:p-4
+            ">
             <div className="relative w-full h-full">
               <Image
                 src="/images/products/build-image-3.jpg"
@@ -83,7 +90,14 @@ function ProductCardsThree() {
           </div>
 
           {/* Second Square Card */}
-          <div className="bg-theme-yellow rounded-[32px] shadow-lg overflow-hidden flex items-center justify-center p-4 h-[250px]">
+          <div className="
+            bg-theme-yellow rounded-[32px] shadow-lg 
+            overflow-hidden flex items-center justify-center 
+            h-[200px] w-[200px]
+            p-2 
+
+            md:h-[250px] md:w-[265px] md:p-4
+            ">
             <div className="relative w-full h-full">
               <Image
                 src="/images/products/build-image-4.jpg"
