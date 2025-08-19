@@ -34,12 +34,12 @@ export default function Products() {
             md:grid md:grid-cols-2 md:gap-10 px-10
             mt-10 mb-30 mx-auto w-full md:px-20
             ">
-            {/* Only show the first three cards on mobile */}
+            {/* show the first three cards on mobile */}
             <RectangularCard src="/images/products/rm-blocks-1.png" />
             <RectangularCard src="/images/products/rm-blocks-1.png" />
             <RectangularCard src="/images/products/rm-blocks-1.png" />
             
-            {/* These cards will be hidden on mobile */}
+            {/* hidden on mobile, exposed on medium and large screen */}
             <RectangularCard 
               className="hidden md:flex" 
               src="/images/products/rm-blocks-1.png" 
