@@ -11,7 +11,12 @@ export default function ContactTrigger() {
   return (
     <>
     <div className='w-full flex justify-center mb-10'>
-      <Separator className="!w-[800px] mx-auto bg-blue-800 !h-[2px]" />
+      <Separator className="
+      !w-[400px] !h-[1px]
+      mx-auto bg-blue-800 
+
+      md:!w-[800px] md:!h-[1.5px] 
+      " />
     </div>
     
     <div>
@@ -25,8 +30,10 @@ export default function ContactTrigger() {
     <div className="w-full flex justify-center p-4 mb-20">
       <Card 
         className="
-          w-[50%] max-w-lg mx-auto shadow-2xl rounded-2xl 
+          w-[70%] max-w-lg mx-auto shadow-2xl rounded-2xl 
           bg-theme-blue p-6 text-center border-none
+
+          md:w-[50%]
         ">
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Dialog>

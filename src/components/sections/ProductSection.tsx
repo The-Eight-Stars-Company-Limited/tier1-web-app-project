@@ -27,7 +27,7 @@ function ProductSection() {
       <div className="
         w-[95%]flex font-poppins
         text-white text-base text-shadow-sm text-center
-        mb-10 leading-6
+        mb-10 leading-7
         justify-center items-center mx-auto 
         
         md:text-center md:text-xl
@@ -56,13 +56,33 @@ function ProductSection() {
 
         {/* Product Cards */}
         <div>
-          <p className="md:hidden flex justify-center mx-auto font-poppins text-white text-lg mb-10">1. Pavement Blocks</p>
+          <p className="
+          md:hidden flex justify-center mx-auto 
+          font-poppins text-white text-lg mb-10
+          ">
+            1. Pavement Blocks
+          </p>
           <ProductCardsOne />
-          <p className="md:hidden flex justify-center mx-auto font-poppins text-white text-lg mb-10 mt-10">2. Pipes</p>
+          <p className="
+          md:hidden flex justify-center mx-auto 
+          font-poppins text-white text-lg mb-10 mt-10
+          ">
+            2. Pipes
+          </p>
           <ProductCardsTwo />
-          <p className="md:hidden flex justify-center mx-auto font-poppins text-white text-lg mb-10 mt-10">3. Electricals</p>
+          <p className="
+          md:hidden flex justify-center mx-auto 
+          font-poppins text-white text-lg mb-10 mt-10
+          ">
+            3. Electricals
+          </p>
           <ProductCardsThree />
-          <p className="md:hidden flex justify-center mx-auto font-poppins text-white text-lg mb-10 mt-10">4. Building Materials</p>
+          <p className="
+          md:hidden flex justify-center mx-auto 
+          font-poppins text-white text-lg mb-10 mt-10
+          ">
+            4. Building Materials
+          </p>
           <ProductCardBuilding />
         </div>
 
