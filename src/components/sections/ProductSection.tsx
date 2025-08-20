@@ -13,7 +13,7 @@ function ProductSection() {
         inline-flex items-center justify-center 
         px-3 py-3
         font-poppins m-auto border-2 border-white
-        w-[120px] h-[45px] 
+        w-[130px] h-[45px] 
         rounded-full cursor-pointer mt-15
         text-sm text-white font-semibold shadow-md
         

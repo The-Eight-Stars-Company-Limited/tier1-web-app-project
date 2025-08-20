@@ -13,7 +13,7 @@ function ServicesSection() {
         px-[20px] py-[6px] 
         text-sm text-[#072C8B] 
         m-auto border-2 border-[#072C8B]
-        w-[135px] h-[50px] rounded-full mt-5
+        w-[145px] h-[50px] rounded-full mt-5
         shadow-md
 
         md:w-[170px] md:h-[60px]
