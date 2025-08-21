@@ -25,7 +25,7 @@ function ContactForm({ formType }: ContactFormProps) {
   });
 
   const onSubmit = async (data: ContactFormSchema) => {
-    toast.loading("Sending your message..."); // toast load message
+    toast.loading("Sending your message...");
   
     const { error } = await supabase
       .from('contact_forms')
@@ -36,7 +36,7 @@ function ContactForm({ formType }: ContactFormProps) {
         }
       ]);
   
-    toast.dismiss(); // dismissing toast message
+    toast.dismiss(); 
   
     if (error) {
       console.error("Error submitting form:", error);
@@ -78,9 +78,9 @@ function ContactForm({ formType }: ContactFormProps) {
             "
           />
           {form.formState.errors.fullName && (
-              <p className="text-red-500 text-sm font-poppins">
-                  {form.formState.errors.fullName.message}
-              </p>
+            <p className="text-red-500 text-sm font-poppins">
+              {form.formState.errors.fullName.message}
+            </p>
           )}
         </div>
 
@@ -104,7 +104,7 @@ function ContactForm({ formType }: ContactFormProps) {
           />
           {form.formState.errors.email && (
             <p className="text-red-500 text-sm font-poppins">
-                {form.formState.errors.email.message}
+              {form.formState.errors.email.message}
             </p>
           )}
         </div>
@@ -128,9 +128,9 @@ function ContactForm({ formType }: ContactFormProps) {
             "
           />
           {form.formState.errors.subject && (
-              <p className="text-red-500 text-sm font-poppins">
-                  {form.formState.errors.subject.message}
-              </p>
+            <p className="text-red-500 text-sm font-poppins">
+              {form.formState.errors.subject.message}
+            </p>
           )}
         </div>
 
@@ -153,7 +153,7 @@ function ContactForm({ formType }: ContactFormProps) {
           />
           {form.formState.errors.message && (
             <p className="text-red-500 text-sm font-poppins">
-                {form.formState.errors.message.message}
+              {form.formState.errors.message.message}
             </p>
           )}
         </div>
