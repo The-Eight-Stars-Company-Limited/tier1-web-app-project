@@ -6,6 +6,8 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Toaster, toast } from 'sonner';
 import { contactFormSchema, type ContactFormSchema } from "@/lib/schemas/contactFormSchema";
+import { supabase } from '@/lib/supabase/client';
+
 
 interface ContactFormProps {
   formType: "inquiry" | "quote";
@@ -23,14 +25,26 @@ function ContactForm({ formType }: ContactFormProps) {
   });
 
   const onSubmit = async (data: ContactFormSchema) => {
-    console.log("Form Type:", formType);
-    console.log("Form Data:", data);
-
-    // TODO: Add Supabase logic here to send data to the database
-    toast.success("Your message has been sent successfully!");
-
-    // Reset the form after submission
-    form.reset();
+    toast.loading("Sending your message...");
+  
+    const { error } = await supabase
+      .from('contact_forms')
+      .insert([
+        {
+          ...data,
+          form_type: formType,
+        }
+      ]);
+  
+    toast.dismiss(); 
+  
+    if (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Failed to send message. Please try again.");
+    } else {
+      toast.success("Your message has been sent successfully!");
+      form.reset();
+    }
   };
 
   return (
@@ -64,9 +78,9 @@ function ContactForm({ formType }: ContactFormProps) {
             "
           />
           {form.formState.errors.fullName && (
-              <p className="text-red-500 text-sm font-poppins">
-                  {form.formState.errors.fullName.message}
-              </p>
+            <p className="text-red-500 text-sm font-poppins">
+              {form.formState.errors.fullName.message}
+            </p>
           )}
         </div>
 
@@ -90,7 +104,7 @@ function ContactForm({ formType }: ContactFormProps) {
           />
           {form.formState.errors.email && (
             <p className="text-red-500 text-sm font-poppins">
-                {form.formState.errors.email.message}
+              {form.formState.errors.email.message}
             </p>
           )}
         </div>
@@ -114,9 +128,9 @@ function ContactForm({ formType }: ContactFormProps) {
             "
           />
           {form.formState.errors.subject && (
-              <p className="text-red-500 text-sm font-poppins">
-                  {form.formState.errors.subject.message}
-              </p>
+            <p className="text-red-500 text-sm font-poppins">
+              {form.formState.errors.subject.message}
+            </p>
           )}
         </div>
 
@@ -139,7 +153,7 @@ function ContactForm({ formType }: ContactFormProps) {
           />
           {form.formState.errors.message && (
             <p className="text-red-500 text-sm font-poppins">
-                {form.formState.errors.message.message}
+              {form.formState.errors.message.message}
             </p>
           )}
         </div>
