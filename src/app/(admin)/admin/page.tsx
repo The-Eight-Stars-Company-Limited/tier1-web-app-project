@@ -16,13 +16,13 @@ export default async function AdminDashboard() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-start min-h-screen bg-gray-900 text-white p-8">
+    <div className="flex flex-col items-center justify-start min-h-screen bg-white text-black/70 p-8">
       <div className="flex w-full max-w-7xl justify-between items-center mb-8">
-        <h1 className="text-4xl font-extrabold tracking-tight">Admin Dashboard</h1>
+        <h1 className="text-4xl font-bold tracking-tight">Admin Dashboard</h1>
         <LogoutButton />
       </div>
 
-      <div className="w-full max-w-7xl flex-grow bg-gray-800 rounded-xl shadow-lg p-6">
+      <div className="w-full max-w-7xl flex-grow bg-theme-blue rounded-xl shadow-lg p-6">
         <MessageTable />
       </div>
     </div>
