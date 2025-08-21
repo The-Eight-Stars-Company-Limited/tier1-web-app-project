@@ -66,13 +66,13 @@ export default function NavBar() {
         <NavLink href="/gallery" label="Gallery" />
         
         <Button className=" 
-          ml-[450px] bg-theme-blue 
+          ml-[450px] bg-blue-800/90
           font-poppins 
           text-md text-white 
           rounded-full
-          py-3 px-3
+          py-3 px-4
           h-[46px]
-          shadow-lg
+          shadow-xl
           ">
           Order Now
         </Button>

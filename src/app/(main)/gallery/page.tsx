@@ -9,13 +9,13 @@ export default function Gallery() {
     <>
       <div className="w-full bg-white" >
         {/* Hero Section */}
-        <div className="relative w-[95%] h-[400px] mx-auto shadow-2xl rounded-b-[16px] mb-10">
+        <div className="relative w-[95%] h-[400px] mx-auto shadow-md rounded-b-[16px] mb-10">
           <Image
-            src="/images/general/card-image-2.jpg"
+            src="/images/products/build-image-3.jpg"
             alt="Service Image"
             fill
             objectFit="cover"
-            className="rounded-b-[16px]"
+            className=""
           />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center px-4">
             <h2 className="font-poppins text-3xl font-bold text-shadow-lg">

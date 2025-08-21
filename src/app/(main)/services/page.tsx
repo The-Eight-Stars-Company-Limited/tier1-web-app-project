@@ -8,14 +8,14 @@ export default function Services() {
   return (
     <>
       <div className="h-[500px] w-full bg-white">
-        <div className="relative w-[95%] h-[400px] mx-auto shadow-2xl rounded-b-[16px] mb-20">
+        <div className="relative w-[95%] h-[400px] mx-auto shadow-md mb-20">
           <div className="relative h-full w-full">
             <Image
               src="/images/hero/hero-image-4.jpg"
               alt="Service Image"
               fill
               objectFit="cover"
-              className="rounded-b-[15px]"
+              className=""
             />
           </div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center">
