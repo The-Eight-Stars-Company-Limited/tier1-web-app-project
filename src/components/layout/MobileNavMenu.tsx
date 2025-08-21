@@ -83,8 +83,8 @@ export default function MobileNavMenu() {
           <NavLink href="/" label="Home" onLinkClick={handleLinkClick} />
           <NavLink href="/products" label="Products" onLinkClick={handleLinkClick} />
           <NavLink href="/services" label="Services" onLinkClick={handleLinkClick} />
-          <NavLink href="/about" label="About us" onLinkClick={handleLinkClick} />
-          <NavLink href="/contact" label="Contact us" onLinkClick={handleLinkClick} />
+          <NavLink href="/portfolio" label="Portfolio" onLinkClick={handleLinkClick} />
+          <NavLink href="/gallery" label="Gallery" onLinkClick={handleLinkClick} />
         </nav>
       </SheetContent>
     </Sheet>

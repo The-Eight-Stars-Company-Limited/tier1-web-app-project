@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Button } from '@/components/ui/button';
 
 interface NavLinkProps {
   href: string;
@@ -62,6 +63,19 @@ export default function NavBar() {
         <NavLink href="/products" label="Products" />
         <NavLink href="/services" label="Services" />
         <NavLink href="/portfolio" label="Portfolio" />
+        <NavLink href="/gallery" label="Gallery" />
+        
+        <Button className=" 
+          ml-[450px] bg-theme-blue 
+          font-poppins 
+          text-md text-white 
+          rounded-full
+          py-3 px-3
+          h-[46px]
+          shadow-lg
+          ">
+          Order Now
+        </Button>
       </div>
     </nav>
   );
