@@ -35,22 +35,40 @@ export default function Products() {
             mt-10 mb-30 mx-auto w-full md:px-20
             ">
             {/* show the first three cards on mobile */}
-            <RectangularCard src="/images/products/rm-blocks-1.png" />
-            <RectangularCard src="/images/products/rm-blocks-1.png" />
-            <RectangularCard src="/images/products/rm-blocks-1.png" />
+            <RectangularCard 
+            src="/images/products/rm-blocks-1.png" 
+            title="Pavement Blocks"
+            description="Durable and high-quality blocks for your projects."
+            />
+            <RectangularCard 
+            src="/images/products/rm-blocks-2.png" 
+            title="Concrete Blocks"
+            description="Durable and high-quality blocks for your projects."
+            />
+            <RectangularCard 
+            src="/images/products/rm-electricals.png" 
+            title="Electricals"
+            description="Durable electrical solutions for your projects."
+            />
             
             {/* hidden on mobile, exposed on medium and large screen */}
             <RectangularCard 
               className="hidden md:flex" 
-              src="/images/products/rm-blocks-1.png" 
+              src="/images/products/rm-paint.png" 
+              title="Paints"
+              description="Durable and high-quality paints for your projects."
             />
             <RectangularCard 
               className="hidden md:flex" 
-              src="/images/products/rm-blocks-1.png" 
+              src="/images/products/rm-wires.png" 
+              title="Wires"
+              description="Durable and high-quality electrical cables for your projects."
             />
             <RectangularCard 
               className="hidden md:flex" 
-              src="/images/products/rm-blocks-1.png" 
+              src="/images/products/roofing.png" 
+              title="Roofing"
+              description="Durable and high-quality roofing for your projects."
             />
           </div>
         

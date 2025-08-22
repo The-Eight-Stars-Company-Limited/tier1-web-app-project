@@ -37,12 +37,12 @@ export default function Portfolio() {
 
         {/* Projects Grid */}
         <div className="w-full mt-10 mb-20 px-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-          <SquareCard src="/images/products/build-image-1.jpeg" />
-          <SquareCard src="/images/products/build-image-4.jpg" />
+          <SquareCard src="/images/general/img-30.jpg" />
+          <SquareCard src="/images/general/img-24.jpg" />
           <SquareCard src="/images/products/build-image-3.jpg" />
           <SquareCard src="/images/products/build-image-4.jpg" />
           <SquareCard src="/images/products/build-image-2.jpeg" />
-          <SquareCard src="/images/products/build-image-1.jpeg" />
+          <SquareCard src="/images/general/img-13.jpg" />
         </div>
 
         <FooterSection />

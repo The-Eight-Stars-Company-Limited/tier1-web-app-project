@@ -4,6 +4,7 @@ import FooterSection from '@/components/sections/FooterSection';
 import HeroSection from '@/components/sections/HeroSection'; 
 import ProductSection from '@/components/sections/ProductSection';
 import ServicesSection from '@/components/sections/ServicesSection';
+import Gallery from '@/components/sections/Gallery';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <ProductSection />
       <ServicesSection />
+      <Gallery />
       <ContactTrigger />
       <FooterSection />
     </main>

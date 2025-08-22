@@ -2,12 +2,59 @@
 
 import FooterSection from '@/components/sections/FooterSection';
 import Image from 'next/image';
-import SquareCard from '@/components/shared/SquareCard';
+import { Button } from '@/components/ui/button';
+import { useState } from 'react';
+
+type ProductItem = {
+  text: string;
+  img: string;
+  category: string;
+};
+
+// Reordered array by category
+const products: ProductItem[] = [
+  // Bags
+  { text: "Elegant Leather Satchel", img: "/images/general/img-1.jpg", category: "Bags" },
+  { text: "Ergonomic Office Chair", img: "/images/general/img-29.jpg", category: "Bags" },
+  { text: "Ergonomic Office Chair", img: "/images/general/img-3.jpg", category: "Bags" },
+  { text: "Ergonomic Office Chair", img: "/images/general/img-4.jpg", category: "Bags" },
+  { text: "Ergonomic Office Chair", img: "/images/general/img-5.jpg", category: "Bags" },
+
+  // Apparel
+  { text: "Organic Cotton T-Shirt", img: "/images/general/img-6.jpg", category: "Apparel" },
+  { text: "Ergonomic Office Chair", img: "/images/general/img-7.jpg", category: "Apparel" },
+  { text: "Ergonomic Office Chair", img: "/images/general/img-8.jpg", category: "Apparel" },
+
+  // Home Goods
+  { text: "Stainless Steel Water Bottle", img: "/images/general/img-9.jpg", category: "Home Goods" },
+  { text: "Ergonomic Office Chair", img: "/images/general/img-20.jpg", category: "Home Goods" },
+  { text: "Ergonomic Office Chair", img: "/images/general/img-21.jpg", category: "Home Goods" },
+  { text: "Ergonomic Office Chair", img: "/images/general/img-12.jpg", category: "Home Goods" },
+
+  // Electronics
+  { text: "Noise-Cancelling Headphones", img: "/images/general/img-13.jpg", category: "Electronics" },
+  { text: "Ergonomic Office Chair", img: "/images/general/img-14.jpg", category: "Electronics" },
+  { text: "Ergonomic Office Chair", img: "/images/general/img-15.jpg", category: "Electronics" },
+  { text: "Ergonomic Office Chair", img: "/images/general/img-16.jpg", category: "Electronics" },
+
+  // Furniture
+  { text: "Ergonomic Office Chair", img: "/images/general/img-17.jpg", category: "Furniture" },
+  { text: "Ergonomic Office Chair", img: "/images/general/img-18.jpg", category: "Furniture" },
+  { text: "Ergonomic Office Chair", img: "/images/general/img-19.jpg", category: "Furniture" },
+  { text: "Ergonomic Office Chair", img: "/images/general/img-20.jpg", category: "Furniture" },
+];
 
 export default function Gallery() {
+  const [category, setCategory] = useState<string>('all');
+
+  // Filtered products
+  const filteredProducts = category === 'all'
+    ? products
+    : products.filter((product) => product.category === category);
+
   return (
     <>
-      <div className="w-full bg-white" >
+      <div className="w-full bg-white">
         {/* Hero Section */}
         <div className="relative w-[95%] h-[400px] mx-auto shadow-md rounded-b-[16px] mb-10">
           <Image
@@ -35,14 +82,53 @@ export default function Gallery() {
           </p>
         </div>
 
+        {/* Category */}
+        <div className="hidden md:flex justify-center items-center mt-20 gap-4 w-full">
+          <Button
+            className="bg-blue-800/90 font-poppins text-md text-white rounded-full py-3 px-4 h-[46px] shadow-xl"
+            onClick={() => setCategory('all')}
+          >
+            All
+          </Button>
+          <Button
+            className="bg-blue-800/90 font-poppins text-md text-white rounded-full py-3 px-4 h-[46px] shadow-xl"
+            onClick={() => setCategory('Bags')}
+          >
+            Bags
+          </Button>
+          <Button
+            className="bg-blue-800/90 font-poppins text-md text-white rounded-full py-3 px-4 h-[46px] shadow-xl"
+            onClick={() => setCategory('Apparel')}
+          >
+            Apparel
+          </Button>
+          <Button
+            className="bg-blue-800/90 font-poppins text-md text-white rounded-full py-3 px-4 h-[46px] shadow-xl"
+            onClick={() => setCategory('Home Goods')}
+          >
+            Home Goods
+          </Button>
+          <Button
+            className="bg-blue-800/90 font-poppins text-md text-white rounded-full py-3 px-4 h-[46px] shadow-xl"
+            onClick={() => setCategory('Electronics')}
+          >
+            Electronics
+          </Button>
+        </div>
+
         {/* Projects Grid */}
-        <div className="w-full mt-10 mb-20 px-20 grid grid-cols-1 md:grid-cols-2 gap-10">
-          <SquareCard src="/images/products/build-image-1.jpeg" />
-          <SquareCard src="/images/products/build-image-4.jpg" />
-          <SquareCard src="/images/products/build-image-3.jpg" />
-          <SquareCard src="/images/products/build-image-4.jpg" />
-          <SquareCard src="/images/products/build-image-2.jpeg" />
-          <SquareCard src="/images/products/build-image-1.jpeg" />
+        <div className="w-full grid grid-cols-3 grid-rows-2 gap-5 px-20 my-15">
+          {filteredProducts.map((product, index) => (
+            <div key={index} className="wrap flex items-center justify-center md:h-[400px]">
+              <Image
+                src={product.img}
+                alt={product.text}
+                width={400}
+                height={400}
+                className="rounded-lg object-cover h-full w-full"
+              />
+            </div>
+          ))}
         </div>
 
         <FooterSection />
