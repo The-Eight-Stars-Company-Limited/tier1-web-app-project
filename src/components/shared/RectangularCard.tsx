@@ -4,19 +4,21 @@ import Image from "next/image";
 
 type RectangularCardProps = {
   src: string;
-  className?: string; 
+  className?: string;
+  title: string;
+  description: string; 
 };
 
-function RectangularCard({ src, className }: RectangularCardProps) {
+function RectangularCard({ src, className, title, description }: RectangularCardProps) {
   return (
     <>
       <div className={`bg-theme-yellow rounded-[32px] shadow-lg h-[250px] flex overflow-hidden ${className}`}>
         <div className="flex-1 p-6 pr-0 flex flex-col justify-end">
           <p className="font-poppins text-xl font-semibold text-theme-blue">
-            Pavement Blocks
+            {title}
           </p>
           <p className="font-poppins text-sm mt-0.5 text-theme-blue w-[185px]">
-            Durable and high-quality blocks for your projects.
+            {description}
           </p>
         </div>
         
