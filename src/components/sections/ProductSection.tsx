@@ -5,8 +5,16 @@ import ProductCardsOne from "@/components/shared/productCards/ProductCardsOne";
 import ProductCardsTwo from "@/components/shared/productCards/ProductCardsTwo";
 import ProductCardsThree from "@/components/shared/productCards/ProductCardsThree";
 import ProductCardBuilding from "@/components/shared/productCards/ProductCardBuilding";
+import { Button } from "../ui/button";
+import { useRouter } from 'next/navigation';
 
 function ProductSection() {
+  const router = useRouter();
+
+  const handleViewMore = () => {
+    router.push('/products');
+  };
+
   return (
     <div className="bg-theme-blue/90 flex flex-col gap-10 mb-[0%] mx-auto px-4 w-full">
       <div className="
@@ -67,7 +75,7 @@ function ProductSection() {
           md:hidden flex justify-center mx-auto 
           font-poppins text-white text-lg mb-10 mt-10
           ">
-            2. Pipes
+            2. Concrete Blocks
           </p>
           <ProductCardsTwo />
           <p className="
@@ -84,6 +92,22 @@ function ProductSection() {
             4. Building Materials
           </p>
           <ProductCardBuilding />
+        </div>
+        <div className="flex justify-center mx-auto w-full mb-15">
+          <Button 
+            onClick={handleViewMore}
+            className="
+            bg-transparent text-theme-yellow font-poppins 
+            rounded-[36px] shadow-md h-[45px]
+            ring-3 ring-theme-yellow
+
+            hover:bg-white/50 hover:text-theme-yellow
+            active:bg-theme-yellow active:text-white
+            cursor-pointer
+            transition-colors duration-200
+            ">
+            View More Products
+          </Button>
         </div>
 
         <LineDrawing />

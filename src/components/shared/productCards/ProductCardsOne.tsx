@@ -45,24 +45,24 @@ function ProductCardsOne() {
               >
                 <div className="grid grid-cols-2 gap-4 mt-4">
                   <ProductDialogCard
-                    src="/images/products/build-image-1.jpeg"
+                    src="/images/products/rm-blocks-1.png"
                     alt="Building a wall"
-                    title="Residential Walls"
+                    title="hollow pavements"
                   />
                   <ProductDialogCard
-                    src="/images/products/build-image-2.jpeg"
+                    src="/images/products/block-rm-2.png"
                     alt="Pavement blocks"
-                    title="Walkways & Patios"
+                    title="hexagonal pavement"
                   />
                   <ProductDialogCard
-                    src="/images/products/build-image-1.jpeg"
+                    src="/images/products/block-rm-1.png"
                     alt="Garden design"
-                    title="Garden Borders"
+                    title="dual hexagonal pavement"
                   />
                   <ProductDialogCard
-                    src="/images/products/build-image-2.jpeg"
+                    src="/images/products/block-5.png"
                     alt="Commercial building"
-                    title="Commercial Foundations"
+                    title="truncated hexagonal pavement"
                   />
                 </div>
               </ProductDialogBtn>
@@ -80,7 +80,7 @@ function ProductCardsOne() {
             ">
             <div className="relative w-full h-full">
               <Image
-                src="/images/products/build-image-1.jpeg"
+                src="/images/general/img-14.jpg"
                 alt="Pavement Blocks"
                 layout="fill"
                 objectFit="cover"
@@ -98,7 +98,7 @@ function ProductCardsOne() {
             md:h-[250px] md:w-[265px] md:p-4">
             <div className="relative w-full h-full">
               <Image
-                src="/images/products/build-image-2.jpeg"
+                src="/images/general/img-13.jpg"
                 alt="Paver blocks"
                 layout="fill"
                 objectFit="cover"

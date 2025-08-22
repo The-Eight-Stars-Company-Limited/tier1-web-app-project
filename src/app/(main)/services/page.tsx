@@ -20,7 +20,7 @@ export default function Services() {
           </div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center">
             <h2 className="font-poppins text-3xl font-bold text-shadow-lg">
-              Our Services
+              Tailored services 
             </h2>
             <p className="font-poppins text-lg mt-2 text-shadow-lg">
               We provide services that are tailored to meet the needs of our clients.
@@ -38,26 +38,26 @@ export default function Services() {
           <ServiceCard
             number={1}
             imageSrc="/images/general/card-image-1.jpg"
-            title="Service 1"
-            description="Description for Service 1"
+            title="Consultation"
+            description="We help you in making the right decisions for your project."
           />
           <ServiceCard
             number={2}
             imageSrc="/images/general/card-image-2.jpg"
-            title="Service 2"
-            description="Description for Service 2"
+            title="Design"
+            description="We help you explore the right design choice for both architectural and interior design."
           />
           <ServiceCard
             number={3}
             imageSrc="/images/general/card-image-3.jpg"
-            title="Service 3"
-            description="Description for Service 3"
+            title="Labour"
+            description="We provide you with the right labour for your project."
           />
           <ServiceCard
             number={4}
             imageSrc="/images/general/card-image-4.jpg"
-            title="Service 4"
-            description="Description for Service 4"
+            title="Production tools"
+            description="We provide you with the right production tools for your project."
           />
         </div>
         <FooterSection />
