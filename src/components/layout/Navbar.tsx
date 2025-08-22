@@ -56,24 +56,25 @@ export default function NavBar() {
       `}
     >
       <div className="
-        max-w-screen-xl mx-auto flex flex-wrap items-center justify-start 
-        gap-x-4 sm:gap-x-6 md:gap-x-8 sm:px-6
-        ">
-        <NavLink href="/" label="Home" />
-        <NavLink href="/products" label="Products" />
-        <NavLink href="/services" label="Services" />
-        <NavLink href="/portfolio" label="Portfolio" />
-        <NavLink href="/gallery" label="Gallery" />
+        max-w-screen-xl mx-auto flex items-center justify-between sm:px-6
+      ">
+        <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-6 md:gap-x-8">
+          <NavLink href="/" label="Home" />
+          <NavLink href="/products" label="Products" />
+          <NavLink href="/services" label="Services" />
+          <NavLink href="/portfolio" label="Portfolio" />
+          <NavLink href="/gallery" label="Gallery" />
+        </div>
         
         <Button className=" 
-          ml-[450px] bg-blue-800/90
+          bg-blue-800/90
           font-poppins 
           text-md text-white 
           rounded-full
           py-3 px-4
           h-[46px]
           shadow-xl
-          ">
+        ">
           Order Now
         </Button>
       </div>
