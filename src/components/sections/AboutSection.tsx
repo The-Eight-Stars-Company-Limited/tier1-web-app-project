@@ -48,21 +48,21 @@ function AboutSection() {
               flex flex-col gap-4
               font-poppins font-normal
               text-base text-theme-blue/80 
-              leading-relaxed
+              leading-7
               mb-15
               
-              md:text-xl md:mb-0 lg:mb-0
+              md:text-lg md:mb-0 lg:mb-0
             ">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt beatae,
-                modi quo natus consequuntur quas perspiciatis repellendus iusto eaque a adipisci
-                at nostrum ea molestiae reiciendis doloremque dolore illum iste!
+              The Eight Stars Company Limited is a trusted name in Ghana’s building and construction industry. 
+              For over six years, we have been providing developers, contractors, and property owners with reliable products 
+              and services that bring projects to life.
               </p>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Et modi ut consequatur repellat facere tempore magni tenetur deserunt.
-                Sit maxime officia eligendi beatae dicta fugiat distinctio libero quisquam
-                possimus consequatur!
+              We manufacture high-quality concrete and pavement blocks while also supplying a 
+              wide range of essential building materials, including cement, sand, iron rods, roofing sheets, 
+              tiles, paints, and fittings. As a one-stop supplier, we make construction easier by 
+              providing reliable materials delivered on time with consistent quality.
               </p>
             </div>
           </div>
