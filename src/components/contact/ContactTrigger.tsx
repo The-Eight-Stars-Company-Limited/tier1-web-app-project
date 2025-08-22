@@ -4,23 +4,13 @@ import React from 'react';
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogTrigger, DialogOverlay } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import ContactDialog from "@/components/contact/ContactDialog";
 
 export default function ContactTrigger() {
   return (
     <>
-    <div className='w-full flex justify-center mb-10'>
-      <Separator className="
-      !w-[400px] !h-[1px]
-      mx-auto bg-blue-800 
-
-      md:!w-[800px] md:!h-[1.5px] 
-      " />
-    </div>
-    
     <div>
-      <p className='font-poppins text-2xl text-shadow-lg text-center text-theme-blue'>
+      <p className='font-poppins text-2xl text-shadow-lg text-center text-theme-blue mt-15'>
         Get in touch with us
       </p>
       <p className='font-poppins text-md text-center text-theme-blue pt-1'>
