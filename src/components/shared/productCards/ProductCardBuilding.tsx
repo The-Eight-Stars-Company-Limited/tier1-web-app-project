@@ -15,11 +15,17 @@ function ProductCardBuilding() {
         mx-auto mb-20 max-w-6xl"
     >
       {/* Image on top (mobile), right (desktop) */}
-      <div className="relative w-full md:w-1/2 h-[200px] md:h-full flex items-center justify-center">
+      <div className="
+      relative 
+      flex items-center justify-center
+      w-full md:w-1/2 h-[200px] 
+      
+      md:h-full 
+      ">
         <Image
           src="/images/products/rm-blocks-2.png"
           alt="All Building Materials"
-          layout="fill"
+          fill
           objectFit="contain"
           className="object-contain"
         />

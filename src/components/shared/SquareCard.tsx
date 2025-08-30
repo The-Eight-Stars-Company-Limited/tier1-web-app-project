@@ -13,7 +13,7 @@ function SquareCard({ src }: { src: string }) {
           <Image
             src={src}
             alt="Pavement Blocks"
-            layout="fill"
+            fill
             objectFit="cover"
             className="rounded-[20px]"
           />

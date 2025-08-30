@@ -12,7 +12,6 @@ export default function LoginPage() {
             src="/images/general/services-3.jpg"
             alt="Service Image"
             fill
-            objectFit="cover"
             className="absolute z-0"
           />
           <div className="absolute inset-0 flex items-center justify-center z-10">

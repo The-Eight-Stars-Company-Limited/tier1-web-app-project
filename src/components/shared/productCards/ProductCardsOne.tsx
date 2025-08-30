@@ -13,20 +13,28 @@ function ProductCardsOne() {
         viewport={{ once: true }}
         className="flex justify-center mx-auto px-4 w-full mb-15 max-w-6xl"
       >
-        {/* Grid container for all three cards */}
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-6 w-full">
 
           {/* Rectangular Card */}
           <motion.div
             whileHover={{ scale: 1.06 }}
-            className="bg-theme-yellow rounded-[32px] shadow-lg overflow-hidden flex flex-col md:flex-row"
-          >
-            {/* Image on top on mobile, left on desktop */}
-            <div className="relative w-full h-[220px] md:h-auto md:w-[50%] flex-shrink-0">
+            className="
+            bg-theme-yellow rounded-[32px] shadow-lg 
+            overflow-hidden 
+            flex flex-col md:flex-row
+            ">
+          
+            {/* Image on top, on mobile, left on desktop */}
+            <div className="
+            relative 
+            w-full h-[220px] 
+            md:h-auto md:w-[50%] 
+            flex-shrink-0
+            ">
               <Image
                 src="/images/products/rm-blocks-1.png"
                 alt="Concrete Blocks"
-                layout="fill"
+                fill
                 objectFit="contain"
                 className="object-contain"
               />
@@ -34,15 +42,17 @@ function ProductCardsOne() {
 
             {/* Text content */}
             <div className="flex flex-col justify-center p-6 md:w-[50%] text-theme-blue">
-              <p className="font-poppins text-xl font-semibold">Pavement Blocks</p>
+              <p className="font-poppins text-xl font-semibold">
+                Pavement Blocks
+              </p>
               <p className="font-poppins text-sm mt-1 w-full max-w-xs">
                 Durable and high-quality blocks for your projects.
               </p>
 
               <ProductDialogBtn
                 title="Concrete Blocks"
-                description="Explore our range of high-quality concrete blocks."
-              >
+                description="Explore our range of high-quality concrete blocks
+                ">
                 <div className="grid grid-cols-2 gap-4 mt-4">
                   <ProductDialogCard
                     src="/images/products/rm-blocks-1.png"
@@ -82,7 +92,7 @@ function ProductCardsOne() {
               <Image
                 src="/images/general/img-14.jpg"
                 alt="Pavement Blocks"
-                layout="fill"
+                fill
                 objectFit="cover"
                 className="rounded-[20px]"
               />

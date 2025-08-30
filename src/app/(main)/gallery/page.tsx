@@ -61,7 +61,6 @@ export default function Gallery() {
             src="/images/products/build-image-3.jpg"
             alt="Service Image"
             fill
-            objectFit="cover"
             className=""
           />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center px-4">

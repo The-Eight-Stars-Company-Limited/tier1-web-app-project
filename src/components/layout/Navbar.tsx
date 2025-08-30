@@ -64,6 +64,7 @@ export default function NavBar() {
           <NavLink href="/services" label="Services" />
           <NavLink href="/portfolio" label="Portfolio" />
           <NavLink href="/gallery" label="Gallery" />
+          <NavLink href="/experiment" label="Experiment" />
         </div>
         
         <Button className=" 

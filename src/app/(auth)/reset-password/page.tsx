@@ -36,7 +36,6 @@ export default function ResetPasswordPage() {
       toast.error(error.message);
     } else {
       toast.success("Password updated successfully! Redirecting...");
-      // After a successful password update, redirect the user back to the login page
       router.push("/auth/login");
     }
   };
